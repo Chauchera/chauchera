@@ -18,3 +18,11 @@ function toggleMenu() {
         menu.classList.add('hidden');
     }
 }
+
+function closeMenu() {
+    var menu = document.getElementById('menu');
+    if (menu.classList.contains('show')) {
+        menu.classList.remove('show');
+        menu.classList.add('hidden');
+    }
+}
