@@ -27,8 +27,11 @@ document.getElementById('menu').addEventListener('touchstart', function(e) {
     touchStartX = e.changedTouches[0].screenX;
 });
 
-document.getElementById('menu').addEventListener('touchend', function(e) {
+document.getElementById('menu').addEventListener('touchmove', function(e) {
     touchEndX = e.changedTouches[0].screenX;
+});
+
+document.getElementById('menu').addEventListener('touchend', function() {
     handleSwipe();
 });
 
