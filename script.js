@@ -37,7 +37,7 @@ document.getElementById('menu').addEventListener('touchend', function() {
 
 function handleSwipe() {
     // Detectar deslizamiento a la izquierda
-    if (touchEndX < touchStartX) {
+    if (touchEndX < touchStartX - 50) { // Asegurarse de que el deslizamiento es significativo
         closeMenu();
     }
 }
