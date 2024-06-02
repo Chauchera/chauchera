@@ -5,7 +5,7 @@ body {
     margin: 0;
     padding: 0;
     text-align: center;
-    overflow-x: hidden; /* MIJIN Para evitar el desplazamiento horizontal */
+    overflow-x: hidden; /* Para evitar el desplazamiento horizontal */
 }
 
 header {
@@ -37,7 +37,7 @@ header {
     left: -250px;
     background-color: #222;
     overflow-x: hidden;
-    transition: 0.5s;
+    transition: left 0.5s;
     padding-top: 60px;
     box-shadow: 4px 0 8px rgba(0, 0, 0, 0.2);
 }
