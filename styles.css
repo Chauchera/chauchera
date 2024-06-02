@@ -1,73 +1,29 @@
-body {
-    font-family: 'Arial', sans-serif;
-    background: linear-gradient(180deg, #000, #333) no-repeat;
-    color: #fff;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-    overflow-x: hidden; /* Para evitar el desplazamiento horizontal */
+/* Estilos anteriores permanecen igual */
+
+.song-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
 }
 
-header {
-    background-color: #000;
+.song {
+    background-color: #333;
+    border: 1px solid #444;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     padding: 20px;
-    border-bottom: 2px solid #444;
-    position: relative;
+    margin: 10px 0;
+    width: 80%;
+    max-width: 600px;
+    text-align: left;
 }
 
-.logo {
-    width: 100px;
-    height: auto;
-}
-
-.menu-icon {
-    font-size: 2em;
-    cursor: pointer;
-    position: absolute;
-    top: 20px;
-    left: 20px;
+.song h3 {
+    margin: 0 0 10px;
     color: #fff;
 }
 
-.side-menu {
-    height: 100%;
-    width: 250px;
-    position: fixed;
-    top: 0;
-    left: -250px;
-    background-color: #222;
-    overflow-x: hidden;
-    transition: left 0.5s;
-    padding-top: 60px;
-    box-shadow: 4px 0 8px rgba(0, 0, 0, 0.2);
-}
-
-.side-menu ul {
-    list-style-type: none; /* Eliminar viñetas */
-    padding: 0;
-    margin: 0;
-}
-
-.side-menu li {
-    margin: 10px 0;
-}
-
-.side-menu a {
-    color: #fff; /* Cambiar el color del texto */
-    text-decoration: none;
-    font-size: 1.2em;
-    display: block;
-    padding: 10px 20px;
-}
-
-.side-menu a:hover {
-    background-color: #575757;
-}
-
-.hidden {
-    left: -250px;
-}
-
-.show {
-    left: 0;
+.song audio {
+    width: 100%;
 }

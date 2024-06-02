@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestro Show - Chauchera: Vulgar Display of Covers</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <img src="LogoBlanco.png" alt="Chauchera Logo" class="logo">
+        <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+    </header>
+    <nav id="menu" class="side-menu hidden">
+        <ul>
+            <li><a href="biografia.html">Biografía Artística</a></li>
+            <li><a href="show.html">Nuestro Show</a></li>
+            <li><a href="ridder.html">Ridder Técnico</a></li>
+            <li><a href="publicidad.html">Publicidad</a></li>
+        </ul>
+    </nav>
+    <div id="content" class="content">
+        <section>
+            <h1>Nuestro Show</h1>
+            <p>Aquí puedes disfrutar de nuestra música. Escucha las siguientes canciones:</p>
+            <div class="song-list">
+                <div class="song">
+                    <h3>Canción 1</h3>
+                    <audio controls>
+                        <source src="song1.mp3" type="audio/mp3">
+                        Tu navegador no soporta la reproducción de audio.
+                    </audio>
+                </div>
+                <!-- Repite este bloque para cada canción -->
+                <div class="song">
+                    <h3>Canción 2</h3>
+                    <audio controls>
+                        <source src="song2.mp3" type="audio/mp3">
+                        Tu navegador no soporta la reproducción de audio.
+                    </audio>
+                </div>
+                <!-- Añade más canciones según sea necesario -->
+            </div>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
