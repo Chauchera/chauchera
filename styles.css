@@ -1,5 +1,5 @@
 .content {
-    background-image: url('images/fondoapp.png'); /* Ajusta el camino si es necesario */
+    background-image: url('fondoapp.png'); /* Ajusta el camino si es necesario */
     background-size: cover; /* Asegura que la imagen cubra toda el área */
     background-position: center; /* Centra la imagen en el área */
     background-repeat: no-repeat; /* Evita que la imagen se repita */
