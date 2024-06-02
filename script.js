@@ -19,6 +19,26 @@ function toggleMenu() {
     }
 }
 
+// Variables para rastrear el toque
+let touchStartX = 0;
+let touchEndX = 0;
+
+document.getElementById('menu').addEventListener('touchstart', function(e) {
+    touchStartX = e.changedTouches[0].screenX;
+});
+
+document.getElementById('menu').addEventListener('touchend', function(e) {
+    touchEndX = e.changedTouches[0].screenX;
+    handleSwipe();
+});
+
+function handleSwipe() {
+    // Detectar deslizamiento a la izquierda
+    if (touchEndX < touchStartX) {
+        closeMenu();
+    }
+}
+
 function closeMenu() {
     var menu = document.getElementById('menu');
     if (menu.classList.contains('show')) {
