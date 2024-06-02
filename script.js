@@ -9,7 +9,7 @@ if ('serviceWorker' in navigator) {
 }
 
 function toggleMenu() {
-    var menu = document.getElementById('menu');
+    var menu = document.getElementById('menu'); /* MIJIN */
     if (menu.classList.contains('hidden')) {
         menu.classList.remove('hidden');
         menu.classList.add('show');
