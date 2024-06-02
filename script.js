@@ -23,6 +23,20 @@ function toggleMenu() {
 let touchStartX = 0;
 let touchEndX = 0;
 
+// Añadir eventos de toque al contenedor principal
+document.getElementById('content').addEventListener('touchstart', function(e) {
+    touchStartX = e.changedTouches[0].screenX;
+});
+
+document.getElementById('content').addEventListener('touchmove', function(e) {
+    touchEndX = e.changedTouches[0].screenX;
+});
+
+document.getElementById('content').addEventListener('touchend', function() {
+    handleSwipe();
+});
+
+// Añadir eventos de toque al menú para detectar el inicio del toque
 document.getElementById('menu').addEventListener('touchstart', function(e) {
     touchStartX = e.changedTouches[0].screenX;
 });
