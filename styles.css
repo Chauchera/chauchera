@@ -5,7 +5,7 @@ body {
     margin: 0;
     padding: 0;
     text-align: center;
-    overflow-x: hidden; /* Para evitar el desplazamiento horizontal */
+    overflow-x: hidden; /* MIJIN Para evitar el desplazamiento horizontal */
 }
 
 header {
