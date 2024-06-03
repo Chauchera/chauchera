@@ -1,7 +1,6 @@
 body {
     font-family: 'Arial', sans-serif;
     background: linear-gradient(180deg, #000, #333) no-repeat;
-    background-color: #0d1214; /* Color de fondo cuando la imagen no cubre todo */
     color: #fff;
     margin: 0;
     padding: 0;
@@ -85,7 +84,6 @@ header {
     min-height: calc(100vh - 60px); /* Ajusta la altura para que cubra solo la sección principal */
     padding: 20px; /* Ajusta el padding si es necesario */
     box-sizing: border-box; /* Incluir el padding en la altura total */
-    padding-bottom: 80px; /* Añadir espacio en la parte inferior para evitar superposición con el footer */
 }
 
 footer {
@@ -211,4 +209,75 @@ footer {
 .member-info p {
     margin: 0;
     color: #ccc;
+}
+
+.show-section {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 20px 0;
+}
+
+.show-photo {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+.setlist-section {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 20px 0;
+}
+
+.song-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.song {
+    background-color: #333;
+    border: 1px solid #444;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    margin: 10px 0;
+    width: 100%;
+    max-width: 600px;
+}
+
+.song h3 {
+    margin: 0 0 10px 0;
+    color: #fff;
+}
+
+.song audio {
+    width: 100%;
+}
+
+.video-section {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 20px 0;
+}
+
+.show-video {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+.content {
+    background-color: #0d1214; /* Fondo de color oscuro para el contenido */
+    padding-bottom: 80px; /* Espacio inferior para evitar superposición con el footer */
 }
