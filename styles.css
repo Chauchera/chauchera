@@ -9,19 +9,17 @@ body {
 }
 
 header {
-    background-color: #000000; /* Color de fondo negro */
-    padding: 20px;
-    border-bottom: 2px solid #444;
-    position: relative;
-    height: 60px; /* Altura del header */
+    background-color: #000000; /* Color rojo elegante */
+    height: 60px;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    position: relative;
 }
 
 .logo {
-    width: 100px;
-    height: auto;
+    width: auto;
+    height: 40px; /* Ajustar según sea necesario */
 }
 
 .menu-icon {
