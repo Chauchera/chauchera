@@ -9,7 +9,7 @@ body {
 }
 
 header {
-    background-color: #B22222; /* Color rojo elegante */
+    background-color: #000000; /* Color rojo elegante */
     height: 60px;
     display: flex;
     justify-content: center;
