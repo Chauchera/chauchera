@@ -19,8 +19,15 @@ header {
     justify-content: center;
 }
 
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
 .logo {
-    width: 100px;
+    width: 150px;
     height: auto;
 }
 
@@ -81,8 +88,64 @@ header {
     background-size: cover; /* Asegura que la imagen cubra toda el área */
     background-position: center; /* Centra la imagen en el área */
     background-repeat: no-repeat; /* Evita que la imagen se repita */
-    height: calc(100vh - 60px); /* Ajusta la altura para que cubra solo la sección principal */
     padding: 20px; /* Ajusta el padding si es necesario */
+    padding-bottom: 60px; /* Ajusta el padding para el footer */
+}
+
+.intro {
+    margin: 20px 0;
+}
+
+.intro h1 {
+    margin-bottom: 10px;
+}
+
+.quick-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.quick-link {
+    background-color: #444;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.quick-link:hover {
+    background-color: #666;
+}
+
+.testimonials {
+    margin: 20px 0;
+}
+
+.testimonials h2 {
+    margin-bottom: 20px;
+}
+
+.testimonials blockquote {
+    background-color: #222;
+    border-left: 5px solid #cc1413;
+    margin: 20px auto;
+    padding: 10px 20px;
+    width: 80%;
+    max-width: 600px;
+    text-align: left;
+    color: #ccc;
+}
+
+.testimonials cite {
+    display: block;
+    margin-top: 10px;
+    text-align: right;
+    font-style: normal;
+    color: #999;
 }
 
 footer {
@@ -115,32 +178,4 @@ footer {
 .contact-info span {
     color: #fff;
     margin: 0 5px;
-}
-
-.song-list {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 20px 0;
-}
-
-.song {
-    background-color: #333;
-    border: 1px solid #444;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    padding: 20px;
-    margin: 10px 0;
-    width: 80%;
-    max-width: 600px;
-    text-align: left;
-}
-
-.song h3 {
-    margin: 0 0 10px;
-    color: #fff;
-}
-
-.song audio {
-    width: 100%;
 }
