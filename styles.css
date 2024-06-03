@@ -1,5 +1,6 @@
 body {
     font-family: 'Arial', sans-serif;
+    background: linear-gradient(180deg, #000, #333) no-repeat;
     color: #fff;
     margin: 0;
     padding: 0;
@@ -8,25 +9,34 @@ body {
 }
 
 header {
-    background-color: #0e1114; /* Color negro sólido */
-    height: 60px; /* Ajusta la altura del header */
-    position: relative;
+    background-color: #B22222; /* Color rojo elegante */
+    height: 60px;
     display: flex;
+    justify-content: center;
     align-items: center;
-    padding: 0 20px;
+    position: relative;
+}
+
+.logo {
+    width: auto;
+    height: 40px; /* Ajustar según sea necesario */
 }
 
 .menu-icon {
     font-size: 2em;
     cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
     color: #fff;
 }
 
 .content {
-    background-image: url('fondoapp.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    background-image: url('fondoapp.png'); /* Ajusta el camino si es necesario */
+    background-size: cover; /* Asegura que la imagen cubra toda el área */
+    background-position: center; /* Centra la imagen en el área */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
     height: calc(100vh - 60px); /* Ajusta la altura para que cubra solo la sección principal */
     padding: 20px; /* Ajusta el padding si es necesario */
 }
