@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nuestro Show - Chauchera: Vulgar Display of Covers</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
     <header>
@@ -13,36 +14,61 @@
     </header>
     <nav id="menu" class="side-menu hidden">
         <ul>
+            <li><a href="index.html">Inicio</a></li>
             <li><a href="biografia.html">Biografía Artística</a></li>
             <li><a href="show.html">Nuestro Show</a></li>
             <li><a href="ridder.html">Ridder Técnico</a></li>
-            <li><a href="publicidad.html">Publicidad</a></li>
+            <li><a href="auspicios.html">Auspicios</a></li>
         </ul>
     </nav>
     <div id="content" class="content">
-        <section>
-            <h1>Nuestro Show</h1>
-            <p>Aquí puedes disfrutar de nuestra música. Escucha las siguientes canciones:</p>
-            <div class="song-list">
-                <div class="song">
-                    <h3>Canción 1</h3>
-                    <audio controls>
-                        <source src="song1.mp3" type="audio/mp3">
-                        Tu navegador no soporta la reproducción de audio.
-                    </audio>
+        <section class="show-section">
+            <img src="foto1.jpg" alt="Fotografía del show" class="show-photo">
+            <p>Nuestro show es una experiencia única que combina la nostalgia de los éxitos del recuerdo con la potencia del metal. Cada presentación está llena de energía y pasión, haciendo que el público viva una experiencia inolvidable.</p>
+            <img src="foto2.jpg" alt="Fotografía del show" class="show-photo">
+            <p>A lo largo de nuestra carrera, hemos tocado en numerosos escenarios y festivales, ganando el corazón de los fans con cada actuación. Nos esforzamos por dar lo mejor de nosotros en cada show, asegurándonos de que cada nota y cada acorde resuene con la máxima intensidad.</p>
+            <div class="setlist-section">
+                <h2>Nuestro Setlist</h2>
+                <div class="song-list">
+                    <div class="song">
+                        <h3>Canción 1</h3>
+                        <audio controls>
+                            <source src="song1.mp3" type="audio/mp3">
+                            Tu navegador no soporta la reproducción de audio.
+                        </audio>
+                    </div>
+                    <!-- Repite este bloque para cada canción -->
+                    <div class="song">
+                        <h3>Canción 2</h3>
+                        <audio controls>
+                            <source src="song2.mp3" type="audio/mp3">
+                            Tu navegador no soporta la reproducción de audio.
+                        </audio>
+                    </div>
+                    <!-- Añade más canciones según sea necesario -->
                 </div>
-                <!-- Repite este bloque para cada canción -->
-                <div class="song">
-                    <h3>Canción 2</h3>
-                    <audio controls>
-                        <source src="song2.mp3" type="audio/mp3">
-                        Tu navegador no soporta la reproducción de audio.
-                    </audio>
-                </div>
-                <!-- Añade más canciones según sea necesario -->
+            </div>
+            <p>Nuestro repertorio incluye una variedad de canciones que abarcan diferentes épocas y estilos, siempre con nuestro toque característico de metal. Cada canción ha sido cuidadosamente seleccionada para asegurar que cada show sea único y memorable.</p>
+            <div class="video-section">
+                <h2>Video Destacado</h2>
+                <video controls class="show-video">
+                    <source src="video.mp4" type="video/mp4">
+                    Tu navegador no soporta la reproducción de video.
+                </video>
             </div>
         </section>
     </div>
+    <footer>
+        <div class="contact-info">
+            <a href="mailto:chauchera@example.com"><i class="fas fa-envelope"></i></a>
+            <span>|</span>
+            <a href="https://facebook.com/chauchera" target="_blank"><i class="fab fa-facebook"></i></a>
+            <span>|</span>
+            <a href="https://instagram.com/chauchera" target="_blank"><i class="fab fa-instagram"></i></a>
+            <span>|</span>
+            <a href="https://tiktok.com/@chauchera" target="_blank"><i class="fab fa-tiktok"></i></a>
+        </div>
+    </footer>
     <script src="script.js"></script>
 </body>
 </html>
