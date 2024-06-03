@@ -157,6 +157,7 @@ footer a {
 footer a:hover {
     color: #fff;
 }
+
 .access-links {
     display: flex;
     flex-direction: column;
@@ -180,3 +181,4 @@ footer a:hover {
 .access-links a:hover {
     background-color: #cc1413; /* Cambia el color de fondo al pasar el ratón */
 }
+
