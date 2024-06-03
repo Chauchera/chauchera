@@ -9,21 +9,11 @@ body {
 }
 
 header {
-    background-color: #000000; /* Color de fondo negro */
+    background-color: #000;
     padding: 20px;
     border-bottom: 2px solid #444;
     position: relative;
-    height: 60px; /* Altura del header */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.logo-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 20px 0;
+    height: 60px; /* Ajuste del tamaño del encabezado */
 }
 
 .logo {
@@ -39,8 +29,9 @@ header {
     font-size: 2em;
     cursor: pointer;
     position: absolute;
-    top: 20px;
+    top: 50%;
     left: 20px;
+    transform: translateY(-50%);
     color: #fff;
 }
 
@@ -93,93 +84,62 @@ header {
     background-position: center; /* Centra la imagen en el área */
     background-repeat: no-repeat; /* Evita que la imagen se repita */
     padding: 20px; /* Ajusta el padding si es necesario */
-    padding-bottom: 60px; /* Ajusta el padding para el footer */
 }
 
-.intro {
+.welcome-section {
     margin: 20px 0;
 }
 
-.intro h1 {
-    margin-bottom: 10px;
-}
-
-.quick-links {
+.menu-shortcuts {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
     margin: 20px 0;
 }
 
-.quick-link {
+.shortcut-box {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.shortcut {
     background-color: #444;
     color: #fff;
     text-decoration: none;
     padding: 10px 20px;
-    margin: 10px;
+    margin: 10px 0;
     border-radius: 5px;
-    transition: background-color 0.3s;
+    display: block;
 }
 
-.quick-link:hover {
-    background-color: #666;
+.shortcut:hover {
+    background-color: #cc1413; /* Cambiar el color al rojo Chauchera */
 }
 
-.testimonials {
+.next-show {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     margin: 20px 0;
 }
 
-.testimonials h2 {
-    margin-bottom: 20px;
-}
-
-.testimonials blockquote {
-    background-color: #222;
-    border-left: 5px solid #cc1413;
-    margin: 20px auto;
-    padding: 10px 20px;
-    width: 80%;
-    max-width: 600px;
-    text-align: left;
-    color: #ccc;
-}
-
-.testimonials cite {
-    display: block;
-    margin-top: 10px;
-    text-align: right;
-    font-style: normal;
-    color: #999;
-}
-
 footer {
-    background-color: #111; /* Fondo del pie de página */
-    color: #fff;
-    padding: 10px 0;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+    background-color: #000;
+    padding: 10px;
     text-align: center;
 }
 
-.contact-info {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.contact-info a {
-    color: #cc1413; /* Color rojo chauchera */
+footer a {
+    color: #cc1413;
     margin: 0 10px;
     text-decoration: none;
     font-size: 1.5em;
 }
 
-.contact-info a:hover {
-    color: #ff6666; /* Color al pasar el cursor */
-}
-
-.contact-info span {
+footer a:hover {
     color: #fff;
-    margin: 0 5px;
 }
