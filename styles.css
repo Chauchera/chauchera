@@ -49,7 +49,6 @@ header {
     list-style-type: none; /* Eliminar viñetas */
     padding: 0;
     margin: 0;
-    text-align: left; /* Alinear el texto a la izquierda */
 }
 
 .side-menu li {
@@ -81,8 +80,34 @@ header {
     background-size: cover; /* Asegura que la imagen cubra toda el área */
     background-position: center; /* Centra la imagen en el área */
     background-repeat: no-repeat; /* Evita que la imagen se repita */
-    height: calc(100vh - 60px); /* Ajusta la altura para que cubra solo la sección principal */
+    min-height: calc(100vh - 60px); /* Ajusta la altura para que cubra solo la sección principal */
     padding: 20px; /* Ajusta el padding si es necesario */
+    box-sizing: border-box;
+}
+
+.history-section, .members-section {
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 20px 0;
+}
+
+.member {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.member-photo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.member-info {
+    text-align: left;
 }
 
 footer {
@@ -115,53 +140,4 @@ footer {
 .contact-info span {
     color: #fff;
     margin: 0 5px;
-}
-
-.welcome-section {
-    margin: 20px 0;
-}
-
-.menu-shortcuts {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin: 20px 0;
-}
-
-.shortcut-box {
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.shortcut {
-    background-color: #444;
-    color: #fff;
-    text-decoration: none;
-    padding: 10px 20px;
-    margin: 10px 0;
-    border-radius: 5px;
-    display: block;
-}
-
-.shortcut:hover {
-    background-color: #cc1413; /* Cambiar el color al rojo Chauchera */
-}
-
-.next-show {
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    margin: 20px 0;
-}
-
-.show-promo {
-    width: 100%;
-    max-width: 600px;
-    height: auto;
-    display: block;
-    margin: 0 auto;
 }
