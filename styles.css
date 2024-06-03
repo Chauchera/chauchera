@@ -9,36 +9,28 @@ body {
 }
 
 header {
-    background-color: #000000; /* Color rojo elegante */
-    height: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background-color: #000000; /* Color de fondo negro */
+    padding: 20px;
+    border-bottom: 2px solid #444;
     position: relative;
+    height: 60px; /* Altura del header */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .logo {
-    width: auto;
-    height: 40px; /* Ajustar según sea necesario */
+    width: 100px;
+    height: auto;
 }
 
 .menu-icon {
     font-size: 2em;
     cursor: pointer;
     position: absolute;
-    top: 50%;
+    top: 20px;
     left: 20px;
-    transform: translateY(-50%);
     color: #fff;
-}
-
-.content {
-    background-image: url('fondoapp.png'); /* Ajusta el camino si es necesario */
-    background-size: cover; /* Asegura que la imagen cubra toda el área */
-    background-position: center; /* Centra la imagen en el área */
-    background-repeat: no-repeat; /* Evita que la imagen se repita */
-    height: calc(100vh - 60px); /* Ajusta la altura para que cubra solo la sección principal */
-    padding: 20px; /* Ajusta el padding si es necesario */
 }
 
 .side-menu {
@@ -82,6 +74,39 @@ header {
 
 .show {
     left: 0;
+}
+
+.content {
+    background-image: url('fondoapp.png'); /* Ajusta el camino si es necesario */
+    background-size: cover; /* Asegura que la imagen cubra toda el área */
+    background-position: center; /* Centra la imagen en el área */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    height: calc(100vh - 60px); /* Ajusta la altura para que cubra solo la sección principal */
+    padding: 20px; /* Ajusta el padding si es necesario */
+}
+
+footer {
+    background-color: #111; /* Fondo del pie de página */
+    color: #fff;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+}
+
+.social-media a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.social-media a:hover {
+    text-decoration: underline;
 }
 
 .song-list {
