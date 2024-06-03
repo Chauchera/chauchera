@@ -9,34 +9,27 @@ body {
 }
 
 header {
-    background-color: #000000; /* Color de fondo del header */
-    height: 60px; /* Altura fija del header */
+    background-color: #000000; /* Color de fondo negro */
+    padding: 20px;
+    border-bottom: 2px solid #444;
+    position: relative;
+    height: 60px; /* Altura del header */
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0 20px; /* Espacio interno opcional */
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
 }
 
 .logo {
-    width: 50px; /* Ajustar el tamaño del logo si es necesario */
+    width: 100px;
     height: auto;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
 }
 
 .menu-icon {
     font-size: 2em;
     cursor: pointer;
     position: absolute;
-    top: 50%;
+    top: 20px;
     left: 20px;
-    transform: translateY(-50%);
     color: #fff;
 }
 
@@ -84,101 +77,70 @@ header {
 }
 
 .content {
-    background-image: url('fondoapp.png'); /* Imagen de fondo */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    min-height: calc(100vh - 60px); /* Resta la altura del header del total de la altura de la ventana */
-    padding: 20px; /* Espacio interno */
-    margin-top: 60px; /* Asegura que el contenido comience después del header */
-    box-sizing: border-box; /* Incluir el padding en la altura total */
-}
-
-.welcome-section {
-    margin: 20px 0;
-}
-
-.menu-shortcuts {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin: 20px 0;
-}
-
-.shortcut-box {
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.shortcut {
-    background-color: #444;
-    color: #fff;
-    text-decoration: none;
-    padding: 10px 20px;
-    margin: 10px 0;
-    border-radius: 5px;
-    display: block;
-}
-
-.shortcut:hover {
-    background-color: #cc1413; /* Cambiar el color al rojo Chauchera */
-}
-
-.next-show {
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    margin: 20px 0;
+    background-image: url('fondoapp.png'); /* Ajusta el camino si es necesario */
+    background-size: cover; /* Asegura que la imagen cubra toda el área */
+    background-position: center; /* Centra la imagen en el área */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    height: calc(100vh - 60px); /* Ajusta la altura para que cubra solo la sección principal */
+    padding: 20px; /* Ajusta el padding si es necesario */
 }
 
 footer {
-    background-color: #000000; /* Color de fondo del pie de página */
+    background-color: #111; /* Fondo del pie de página */
+    color: #fff;
     padding: 10px 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-top: 2px solid #444;
     position: fixed;
     bottom: 0;
     width: 100%;
+    text-align: center;
 }
 
-footer a {
-    color: #cc1413; /* Color rojo Chauchera */
-    margin: 0 10px; /* Añadir espacio entre los iconos */
+.contact-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-info a {
+    color: #cc1413; /* Color rojo chauchera */
+    margin: 0 10px;
     text-decoration: none;
     font-size: 1.5em;
 }
 
-footer a:hover {
-    color: #fff;
+.contact-info a:hover {
+    color: #ff6666; /* Color al pasar el cursor */
 }
 
-.access-links {
+.contact-info span {
+    color: #fff;
+    margin: 0 5px;
+}
+
+.song-list {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 20px 0;
 }
 
-.access-links a {
-    background-color: #444; /* Fondo oscuro para los botones */
-    color: #fff; /* Color del texto */
-    padding: 10px 20px;
+.song {
+    background-color: #333;
+    border: 1px solid #444;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
     margin: 10px 0;
-    border-radius: 5px;
-    text-decoration: none;
-    font-size: 1.2em;
     width: 80%;
-    max-width: 300px;
-    text-align: center;
+    max-width: 600px;
+    text-align: left;
 }
 
-.access-links a:hover {
-    background-color: #cc1413; /* Cambia el color de fondo al pasar el ratón */
+.song h3 {
+    margin: 0 0 10px;
+    color: #fff;
 }
 
+.song audio {
+    width: 100%;
+}
