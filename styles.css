@@ -9,7 +9,7 @@ body {
 }
 
 header {
-    background-color: #000000; /* Color rojo elegante */
+    background-color: #000000; /* Color negro */
     height: 60px;
     display: flex;
     justify-content: center;
@@ -26,8 +26,9 @@ header {
     font-size: 2em;
     cursor: pointer;
     position: absolute;
-    top: 20px;
+    top: 50%;
     left: 20px;
+    transform: translateY(-50%);
     color: #fff;
 }
 
@@ -100,7 +101,7 @@ footer {
 }
 
 .contact-info a {
-    color: #cc1413; /* Color rojo chauchera */
+    color: #ffffff; /* Color blanco */
     margin: 0 10px;
     text-decoration: none;
     font-size: 1.5em;
