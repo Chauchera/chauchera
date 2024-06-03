@@ -9,7 +9,7 @@ body {
 
 header {
     background-color: #0e1114; /* Color negro sólido */
-    height: 50px; /* Ajusta la altura del header */
+    height: 60px; /* Ajusta la altura del header */
     position: relative;
     display: flex;
     align-items: center;
@@ -27,7 +27,7 @@ header {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: calc(100vh - 50px); /* Ajusta la altura para que cubra solo la sección principal */
+    height: calc(100vh - 60px); /* Ajusta la altura para que cubra solo la sección principal */
     padding: 20px; /* Ajusta el padding si es necesario */
 }
 
