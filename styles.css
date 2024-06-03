@@ -1,6 +1,7 @@
 body {
     font-family: 'Arial', sans-serif;
     background: linear-gradient(180deg, #000, #333) no-repeat;
+    background-color: #0d1214; /* Color de fondo cuando la imagen no cubre todo */
     color: #fff;
     margin: 0;
     padding: 0;
@@ -81,8 +82,10 @@ header {
     background-size: cover; /* Asegura que la imagen cubra toda el área */
     background-position: center; /* Centra la imagen en el área */
     background-repeat: no-repeat; /* Evita que la imagen se repita */
-    height: calc(100vh - 60px); /* Ajusta la altura para que cubra solo la sección principal */
+    min-height: calc(100vh - 60px); /* Ajusta la altura para que cubra solo la sección principal */
     padding: 20px; /* Ajusta el padding si es necesario */
+    box-sizing: border-box; /* Incluir el padding en la altura total */
+    padding-bottom: 80px; /* Añadir espacio en la parte inferior para evitar superposición con el footer */
 }
 
 footer {
@@ -165,6 +168,7 @@ footer {
     display: block;
     margin: 0 auto;
 }
+
 .history-section {
     background-color: rgba(0, 0, 0, 0.5);
     padding: 20px;
