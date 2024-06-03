@@ -117,30 +117,51 @@ footer {
     margin: 0 5px;
 }
 
-.song-list {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.welcome-section {
     margin: 20px 0;
 }
 
-.song {
-    background-color: #333;
-    border: 1px solid #444;
+.menu-shortcuts {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 20px 0;
+}
+
+.shortcut-box {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    padding: 20px;
-    margin: 10px 0;
-    width: 80%;
-    max-width: 600px;
-    text-align: left;
 }
 
-.song h3 {
-    margin: 0 0 10px;
+.shortcut {
+    background-color: #444;
     color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 10px 0;
+    border-radius: 5px;
+    display: block;
 }
 
-.song audio {
+.shortcut:hover {
+    background-color: #cc1413; /* Cambiar el color al rojo Chauchera */
+}
+
+.next-show {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 20px 0;
+}
+
+.show-promo {
     width: 100%;
+    max-width: 600px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
 }
