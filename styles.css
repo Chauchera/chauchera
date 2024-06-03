@@ -1,5 +1,16 @@
+/* Añade la imagen de fondo para la cabecera */
+.header-bg {
+    background-image: url('FondoCabecera.png'); /* Ajusta la ruta de la imagen */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 20px;
+    border-bottom: 2px solid #444;
+    position: relative;
+}
+
 .content {
-    background-image: url('fondoapp.png'); /* Ajusta el camino si es necesario */
+    background-image: url('fondoapp.png'); /* Ajusta la ruta si es necesario */
     background-size: cover; /* Asegura que la imagen cubra toda el área */
     background-position: center; /* Centra la imagen en el área */
     background-repeat: no-repeat; /* Evita que la imagen se repita */
@@ -15,13 +26,6 @@ body {
     padding: 0;
     text-align: center;
     overflow-x: hidden; /* Para evitar el desplazamiento horizontal */
-}
-
-header {
-    background-color: #000;
-    padding: 20px;
-    border-bottom: 2px solid #444;
-    position: relative;
 }
 
 .logo {
@@ -80,6 +84,7 @@ header {
 .show {
     left: 0;
 }
+
 .song-list {
     display: flex;
     flex-direction: column;
