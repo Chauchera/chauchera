@@ -22,7 +22,7 @@ header {
 }
 
 .logo {
-    width: 100px;
+    width: 80px; /* Ajustar el tamaño del logo si es necesario */
     height: auto;
     position: absolute;
     top: 50%;
@@ -149,7 +149,7 @@ footer {
 
 footer a {
     color: #cc1413; /* Color rojo Chauchera */
-    margin: 0 15px;
+    margin: 0 10px; /* Añadir espacio entre los iconos */
     text-decoration: none;
     font-size: 1.5em;
 }
