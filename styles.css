@@ -8,7 +8,7 @@ body {
 }
 
 header {
-    background-color: #8B0000; /* Color rojo sólido */
+    background-color: #0e1114; /* Color negro sólido */
     height: 50px; /* Ajusta la altura del header */
     position: relative;
     display: flex;
