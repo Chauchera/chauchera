@@ -9,11 +9,16 @@ body {
 }
 
 header {
-    background-color: #000;
-    padding: 20px;
-    border-bottom: 2px solid #444;
-    position: relative;
-    height: 60px; /* Ajuste del tamaño del encabezado */
+    background-color: #000000; /* Color de fondo del header */
+    height: 60px; /* Altura fija del header */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px; /* Espacio interno opcional */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
 }
 
 .logo {
@@ -79,11 +84,14 @@ header {
 }
 
 .content {
-    background-image: url('fondoapp.png'); /* Ajusta el camino si es necesario */
-    background-size: cover; /* Asegura que la imagen cubra toda el área */
-    background-position: center; /* Centra la imagen en el área */
-    background-repeat: no-repeat; /* Evita que la imagen se repita */
-    padding: 20px; /* Ajusta el padding si es necesario */
+    background-image: url('fondoapp.png'); /* Imagen de fondo */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: calc(100vh - 60px); /* Resta la altura del header del total de la altura de la ventana */
+    padding: 20px; /* Espacio interno */
+    margin-top: 60px; /* Asegura que el contenido comience después del header */
+    box-sizing: border-box; /* Incluir el padding en la altura total */
 }
 
 .welcome-section {
@@ -128,18 +136,47 @@ header {
 }
 
 footer {
-    background-color: #000;
-    padding: 10px;
-    text-align: center;
+    background-color: #000000; /* Color de fondo del pie de página */
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 2px solid #444;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
 
 footer a {
-    color: #cc1413;
-    margin: 0 10px;
+    color: #cc1413; /* Color rojo Chauchera */
+    margin: 0 15px;
     text-decoration: none;
     font-size: 1.5em;
 }
 
 footer a:hover {
     color: #fff;
+}
+.access-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.access-links a {
+    background-color: #444; /* Fondo oscuro para los botones */
+    color: #fff; /* Color del texto */
+    padding: 10px 20px;
+    margin: 10px 0;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.2em;
+    width: 80%;
+    max-width: 300px;
+    text-align: center;
+}
+
+.access-links a:hover {
+    background-color: #cc1413; /* Cambia el color de fondo al pasar el ratón */
 }
