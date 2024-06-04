@@ -23,56 +23,49 @@
         </ul>
     </nav>
     <div id="content" class="content">
-        <h1>Nuestras Canciones</h1>
         <div class="playlist">
             <ul>
-                <li>
+                <li onclick="playSong('amorescomoelnuestro.mp3')">
                     <img src="cover1.jpg" alt="Cover 1" class="song-cover">
-                    <span>Amores como el nuestro</span>
-                    <audio controls>
-                        <source src="amorescomoelnuestro.mp3" type="audio/mp3">
-                        Tu navegador no soporta la reproducción de audio.
-                    </audio>
+                    <div class="song-info">
+                        <span class="song-title">Amores como el Nuestro</span>
+                        <span class="song-artist">Chauchera</span>
+                    </div>
                 </li>
-                <li>
+                <li onclick="playSong('queteperdonedios.mp3')">
                     <img src="cover2.jpg" alt="Cover 2" class="song-cover">
-                    <span>Que te perdone Dios</span>
-                    <audio controls>
-                        <source src="queteperdonedios.mp3" type="audio/mp3">
-                        Tu navegador no soporta la reproducción de audio.
-                    </audio>
+                    <div class="song-info">
+                        <span class="song-title">Que te Perdone Dios</span>
+                        <span class="song-artist">Chauchera</span>
+                    </div>
                 </li>
-                <li>
+                <li onclick="playSong('eltriste.mp3')">
                     <img src="cover3.jpg" alt="Cover 3" class="song-cover">
-                    <span>El Triste</span>
-                    <audio controls>
-                        <source src="eltriste.mp3" type="audio/mp3">
-                        Tu navegador no soporta la reproducción de audio.
-                    </audio>
+                    <div class="song-info">
+                        <span class="song-title">El Triste</span>
+                        <span class="song-artist">Chauchera</span>
+                    </div>
                 </li>
-                <li>
+                <li onclick="playSong('nuestrojuramento.mp3')">
                     <img src="cover4.jpg" alt="Cover 4" class="song-cover">
-                    <span>Nuestro Juramento</span>
-                    <audio controls>
-                        <source src="nuestrojuramento.mp3" type="audio/mp3">
-                        Tu navegador no soporta la reproducción de audio.
-                    </audio>
+                    <div class="song-info">
+                        <span class="song-title">Nuestro Juramento</span>
+                        <span class="song-artist">Chauchera</span>
+                    </div>
                 </li>
-                <li>
+                <li onclick="playSong('nuncavoyaolvidarte.mp3')">
                     <img src="cover5.jpg" alt="Cover 5" class="song-cover">
-                    <span>Nunca voy a olvidarte</span>
-                    <audio controls>
-                        <source src="nuncavoyaolvidarte.mp3" type="audio/mp3">
-                        Tu navegador no soporta la reproducción de audio.
-                    </audio>
+                    <div class="song-info">
+                        <span class="song-title">Nunca voy a Olvidarte</span>
+                        <span class="song-artist">Chauchera</span>
+                    </div>
                 </li>
-                <li>
+                <li onclick="playSong('ellaengano.mp3')">
                     <img src="cover6.jpg" alt="Cover 6" class="song-cover">
-                    <span>El la engañó</span>
-                    <audio controls>
-                        <source src="ellaengano.mp3" type="audio/mp3">
-                        Tu navegador no soporta la reproducción de audio.
-                    </audio>
+                    <div class="song-info">
+                        <span class="song-title">El la Engañó</span>
+                        <span class="song-artist">Chauchera</span>
+                    </div>
                 </li>
             </ul>
         </div>
@@ -87,6 +80,10 @@
             <span>|</span>
             <a href="https://tiktok.com/@chaucherametal" target="_blank"><i class="fab fa-tiktok"></i></a>
         </div>
+        <audio id="audioPlayer" controls>
+            <source id="audioSource" src="" type="audio/mp3">
+            Tu navegador no soporta la reproducción de audio.
+        </audio>
     </footer>
     <script src="script.js"></script>
 </body>
