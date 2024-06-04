@@ -331,9 +331,6 @@ audio {
     width: 100%; /* Ajusta el ancho del reproductor de audio al 100% del contenedor */
     height: 50px; /* Ajusta la altura del reproductor de audio según sea necesario */
 }
-.playlist audio {
-    width: 100%; /* Asegura que el ancho del reproductor de audio ocupe todo el contenedor */
-}
 .playlist ul {
     list-style-type: none; /* Elimina las viñetas */
     padding: 0; /* Elimina el padding */
@@ -348,8 +345,14 @@ audio {
     padding: 10px; /* Espacio interno */
 }
 
-.playlist span {
+.song-title {
     display: block; /* Separa el texto del reproductor */
     margin-bottom: 10px; /* Margen inferior */
     color: #fff; /* Color del texto */
+    font-size: 1.2em; /* Tamaño de fuente ajustado */
+    text-align: left; /* Alinear el texto a la izquierda */
+}
+
+.playlist audio {
+    width: 100%; /* Asegura que el ancho del reproductor de audio ocupe todo el contenedor */
 }
