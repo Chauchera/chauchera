@@ -278,16 +278,12 @@ footer {
     border-radius: 10px;
     margin: 20px 0;
 }
-
 .playlist {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: #0d1214;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     margin: 20px 0;
-    width: 100%;
-    max-width: 600px;
-    margin: 0 auto;
 }
 
 .playlist ul {
@@ -299,33 +295,43 @@ footer {
 .playlist li {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    margin: 10px 0;
-    padding: 10px;
-    background-color: #333;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 20px 0;
+    cursor: pointer;
 }
 
 .song-cover {
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     border-radius: 5px;
-    margin-right: 10px;
+    margin-right: 20px;
 }
 
-.playlist span {
+.song-info {
     flex: 1;
     text-align: left;
+}
+
+.song-title {
+    font-size: 1.2em;
     color: #fff;
 }
 
-.playlist audio {
-    width: 100%;
-    max-width: 250px;
+.song-artist {
+    font-size: 0.9em;
+    color: #ccc;
 }
 
 audio {
-    width: 100%; /* Ajusta el ancho del reproductor de audio al 100% del contenedor */
-    height: 50px; /* Ajusta la altura del reproductor de audio según sea necesario */
+    width: 100%; 
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: #0d1214;
+    border-top: 1px solid #333;
 }
+
+
+
+
+
+
