@@ -330,6 +330,16 @@ audio {
     border-top: 1px solid #333;
 }
 
+.playlist span {
+    flex: 1;
+    text-align: left;
+    color: #fff;
+}
+
+.playlist audio {
+    width: 100%;
+    max-width: 250px;
+}
 
 
 
