@@ -84,6 +84,8 @@ header {
     min-height: calc(100vh - 60px); /* Ajusta la altura para que cubra solo la sección principal */
     padding: 20px; /* Ajusta el padding si es necesario */
     box-sizing: border-box; /* Incluir el padding en la altura total */
+    background-color: #0d1214; /* Fondo de color oscuro para el contenido */
+    padding-bottom: 80px; /* Espacio inferior para evitar superposición con el footer */
 }
 
 footer {
@@ -277,16 +279,15 @@ footer {
     margin: 20px 0;
 }
 
-.content {
-    background-color: #0d1214; /* Fondo de color oscuro para el contenido */
-    padding-bottom: 80px; /* Espacio inferior para evitar superposición con el footer */
-}
 .playlist {
     background-color: rgba(0, 0, 0, 0.5);
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     margin: 20px 0;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 .playlist ul {
@@ -297,14 +298,20 @@ footer {
 
 .playlist li {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 10px 0;
-    border-bottom: 1px solid #444;
+    justify-content: space-between;
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #333;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.playlist li:last-child {
-    border-bottom: none;
+.song-cover {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    margin-right: 10px;
 }
 
 .playlist span {
@@ -314,73 +321,11 @@ footer {
 }
 
 .playlist audio {
-    flex: 1;
-    max-width: 250px;
-    margin-left: 20px;
-}
-
-.show-photo {
     width: 100%;
-    max-width: 600px;
-    height: auto;
-    display: block;
-    margin: 20px auto;
+    max-width: 250px;
 }
 
 audio {
     width: 100%; /* Ajusta el ancho del reproductor de audio al 100% del contenedor */
     height: 50px; /* Ajusta la altura del reproductor de audio según sea necesario */
-}
-.playlist ul {
-    list-style-type: none; /* Elimina las viñetas */
-    padding: 0; /* Elimina el padding */
-    margin: 0; /* Elimina el margin */
-}
-
-.playlist li {
-    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro */
-    border-radius: 10px; /* Bordes redondeados */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
-    margin: 10px 0; /* Margen entre elementos */
-    padding: 10px; /* Espacio interno */
-}
-
-.song-title {
-    display: block; /* Separa el texto del reproductor */
-    margin-bottom: 10px; /* Margen inferior */
-    color: #fff; /* Color del texto */
-    font-size: 1.2em; /* Tamaño de fuente ajustado */
-    text-align: left; /* Alinear el texto a la izquierda */
-}
-
-.playlist audio {
-    width: 100%; /* Asegura que el ancho del reproductor de audio ocupe todo el contenedor */
-}
-
-.song-card {
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    margin: 20px 0;
-    padding: 20px;
-    display: flex;
-    align-items: center;
-}
-
-.song-image {
-    width: 100px;
-    height: 100px;
-    border-radius: 10px;
-    margin-right: 20px;
-}
-
-.song-info {
-    flex: 1;
-    text-align: left;
-}
-
-.song-title {
-    font-size: 1.2em;
-    margin-bottom: 10px;
-    color: #fff;
 }
