@@ -356,3 +356,31 @@ audio {
 .playlist audio {
     width: 100%; /* Asegura que el ancho del reproductor de audio ocupe todo el contenedor */
 }
+
+.song-card {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 20px 0;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.song-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.song-info {
+    flex: 1;
+    text-align: left;
+}
+
+.song-title {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #fff;
+}
