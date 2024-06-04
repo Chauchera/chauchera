@@ -326,3 +326,30 @@ footer {
     display: block;
     margin: 20px auto;
 }
+
+audio {
+    width: 100%; /* Ajusta el ancho del reproductor de audio al 100% del contenedor */
+    height: 50px; /* Ajusta la altura del reproductor de audio según sea necesario */
+}
+.playlist audio {
+    width: 100%; /* Asegura que el ancho del reproductor de audio ocupe todo el contenedor */
+}
+.playlist ul {
+    list-style-type: none; /* Elimina las viñetas */
+    padding: 0; /* Elimina el padding */
+    margin: 0; /* Elimina el margin */
+}
+
+.playlist li {
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+    margin: 10px 0; /* Margen entre elementos */
+    padding: 10px; /* Espacio interno */
+}
+
+.playlist span {
+    display: block; /* Separa el texto del reproductor */
+    margin-bottom: 10px; /* Margen inferior */
+    color: #fff; /* Color del texto */
+}
