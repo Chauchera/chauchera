@@ -281,3 +281,48 @@ footer {
     background-color: #0d1214; /* Fondo de color oscuro para el contenido */
     padding-bottom: 80px; /* Espacio inferior para evitar superposición con el footer */
 }
+.playlist {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 20px 0;
+}
+
+.playlist ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.playlist li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #444;
+}
+
+.playlist li:last-child {
+    border-bottom: none;
+}
+
+.playlist span {
+    flex: 1;
+    text-align: left;
+    color: #fff;
+}
+
+.playlist audio {
+    flex: 1;
+    max-width: 250px;
+    margin-left: 20px;
+}
+
+.show-photo {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+}
