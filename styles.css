@@ -279,7 +279,7 @@ footer {
     margin: 20px 0;
 }
 .playlist {
-    background-color: #0d1214;
+    background-color: rgba(13, 18, 20, 0.8); /* Añade opacidad al contenedor */
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -324,21 +324,10 @@ footer {
 audio {
     width: 100%; 
     position: fixed;
-    bottom: 0;
+    bottom: 60px; /* Asegura que esté por encima del footer */
     left: 0;
     background-color: #0d1214;
     border-top: 1px solid #333;
-}
-
-.playlist span {
-    flex: 1;
-    text-align: left;
-    color: #fff;
-}
-
-.playlist audio {
-    width: 100%;
-    max-width: 250px;
 }
 
 
