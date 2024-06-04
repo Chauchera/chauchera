@@ -84,8 +84,6 @@ header {
     min-height: calc(100vh - 60px); /* Ajusta la altura para que cubra solo la sección principal */
     padding: 20px; /* Ajusta el padding si es necesario */
     box-sizing: border-box; /* Incluir el padding en la altura total */
-    background-color: #0d1214; /* Fondo de color oscuro para el contenido */
-    padding-bottom: 80px; /* Espacio inferior para evitar superposición con el footer */
 }
 
 footer {
@@ -278,12 +276,19 @@ footer {
     border-radius: 10px;
     margin: 20px 0;
 }
+
+.content {
+    background-color: #0d1214; /* Fondo de color oscuro para el contenido */
+    padding-bottom: 80px; /* Espacio inferior para evitar superposición con el footer */
+}
 .playlist {
-    background-color: rgba(13, 18, 20, 0.8); /* Añade opacidad al contenedor */
+    background-color: rgba(0, 0, 0, 0.5);
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     margin: 20px 0;
+    height: calc(100vh - 140px); /* Ajusta la altura del contenedor de la lista de canciones */
+    overflow-y: scroll; /* Permite el desplazamiento vertical */
 }
 
 .playlist ul {
@@ -322,15 +327,11 @@ footer {
 }
 
 audio {
-    width: 100%; 
+    width: calc(100% - 40px); /* Ajusta el ancho del reproductor de audio */
+    margin: 0 20px; /* Margen lateral para alinearlo con el contenedor */
     position: fixed;
-    bottom: 60px; /* Asegura que esté por encima del footer */
+    bottom: 0;
     left: 0;
     background-color: #0d1214;
     border-top: 1px solid #333;
 }
-
-
-
-
-
