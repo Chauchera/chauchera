@@ -90,6 +90,7 @@ header {
     box-sizing: border-box; /* Incluir el padding en la altura total */
     background-color: #0d1214; /* Fondo de color oscuro para el contenido */
     padding-bottom: 80px; /* Espacio inferior para evitar superposición con el footer */
+    margin-top: 60px; /* Añadir margen superior igual a la altura del header */
 }
 
 footer {
