@@ -15,7 +15,10 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
+    position: fixed; /* Cambiado a fijo */
+    top: 0; /* Posicionarlo en la parte superior */
+    width: 100%; /* Asegurar que ocupe todo el ancho de la pantalla */
+    z-index: 1000; /* Asegurar que esté por encima de otros elementos */
 }
 
 .logo {
