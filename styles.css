@@ -181,25 +181,29 @@ footer {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     margin: 20px 0;
+    display: flex;
 }
 
 .history-content {
     display: flex;
+    align-items: stretch; /* Asegura que los elementos hijos se estiren a lo largo de la altura del contenedor */
 }
 
 .history-image {
     flex: 0 0 30%;
+    max-width: 30%;
 }
 
 .history-image img {
     width: 100%;
-    height: auto;
-    border-radius: 10px;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px 0 0 10px; /* Opcional: para redondear solo las esquinas izquierda de la imagen */
 }
 
 .history-text {
     flex: 1;
-    padding-left: 20px;
+    padding-left: 20px; /* Ajusta según sea necesario para el espacio entre la imagen y el texto */
     text-align: left;
 }
 
