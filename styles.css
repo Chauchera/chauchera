@@ -207,10 +207,11 @@ footer {
     flex: 1;
     padding: 20px; /* Ajusta según sea necesario para el espacio entre la imagen y el texto */
     text-align: left;
+    margin-top: 20px;
 }
 
 .history-text h1 {
-    margin-top: 20px;
+    margin-top: 0;
 }
 
 .members-section {
