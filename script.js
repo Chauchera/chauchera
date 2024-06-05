@@ -19,9 +19,11 @@ function toggleMenu() {
     }
 }
 
+// Variables para rastrear el toque
 let touchStartX = 0;
 let touchEndX = 0;
 
+// Añadir eventos de toque al contenedor principal
 document.getElementById('content').addEventListener('touchstart', function(e) {
     touchStartX = e.changedTouches[0].screenX;
 });
@@ -34,6 +36,7 @@ document.getElementById('content').addEventListener('touchend', function() {
     handleSwipe();
 });
 
+// Añadir eventos de toque al menú para detectar el inicio del toque
 document.getElementById('menu').addEventListener('touchstart', function(e) {
     touchStartX = e.changedTouches[0].screenX;
 });
@@ -47,7 +50,8 @@ document.getElementById('menu').addEventListener('touchend', function() {
 });
 
 function handleSwipe() {
-    if (touchEndX < touchStartX - 50) {
+    // Detectar deslizamiento a la izquierda
+    if (touchEndX < touchStartX - 50) { // Asegurarse de que el deslizamiento es significativo
         closeMenu();
     }
 }
@@ -60,23 +64,21 @@ function closeMenu() {
     }
 }
 
-function playSong(song) {
-    const audio = document.getElementById('audio');
-    const audioSource = document.getElementById('audio-source');
-    const currentSongTitle = document.getElementById('current-song-title');
-    const currentSongArtist = document.getElementById('current-song-artist');
-    const songCover = document.querySelector('.audio-player .song-cover');
+function playSong(src) {
+    var audio = document.getElementById("audio");
+    var audioSource = document.getElementById("audio-source");
+    var currentSongTitle = document.getElementById("current-song-title");
+    var currentSongArtist = document.getElementById("current-song-artist");
+    var currentSongCover = document.querySelector(".audio-player .song-cover");
 
-    const selectedSongElement = document.querySelector(`[onclick="playSong('${song}')"]`);
-    const songTitle = selectedSongElement.querySelector('.song-title').innerText;
-    const songArtist = selectedSongElement.querySelector('.song-artist').innerText;
-    const songCoverSrc = selectedSongElement.querySelector('.song-cover').src;
-
-    audioSource.src = song;
+    audioSource.src = src;
     audio.load();
     audio.play();
 
-    currentSongTitle.innerText = songTitle;
-    currentSongArtist.innerText = songArtist;
-    songCover.src = songCoverSrc;
+    var songElement = document.querySelector(`li[onclick="playSong('${src}')"]`);
+    if (songElement) {
+        currentSongTitle.innerText = songElement.querySelector(".song-title").innerText;
+        currentSongArtist.innerText = "Chauchera";
+        currentSongCover.src = songElement.querySelector(".song-cover").src;
+    }
 }
