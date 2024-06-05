@@ -254,7 +254,7 @@ footer {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     overflow-y: auto;
-    max-height: calc(100vh - 300px); /* Ajuste para dejar espacio para el header, el footer y el reproductor */
+    max-height: calc(100vh - 400px); /* Ajuste para dejar espacio para el header, el footer y el reproductor */
 }
 
 .playlist {
