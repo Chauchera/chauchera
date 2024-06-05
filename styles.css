@@ -1,4 +1,4 @@
-/* CSS para el cuerpo y encabezado */
+/* CSS existente para el cuerpo y encabezado */
 body {
     font-family: 'Arial', sans-serif;
     background: linear-gradient(180deg, #000, #333) no-repeat;
@@ -6,11 +6,11 @@ body {
     margin: 0;
     padding: 0;
     text-align: center;
-    overflow-x: hidden; /* Para evitar el desplazamiento horizontal */
+    overflow-x: hidden;
 }
 
 header {
-    background-color: #000000; /* Color negro */
+    background-color: #000000;
     height: 60px;
     display: flex;
     justify-content: center;
@@ -20,7 +20,7 @@ header {
 
 .logo {
     width: auto;
-    height: 40px; /* Ajustar según sea necesario */
+    height: 40px;
 }
 
 .menu-icon {
@@ -47,10 +47,10 @@ header {
 }
 
 .side-menu ul {
-    list-style-type: none; /* Eliminar viñetas */
+    list-style-type: none;
     padding: 0;
     margin: 0;
-    text-align: left; /* Alinear el texto a la izquierda */
+    text-align: left;
 }
 
 .side-menu li {
@@ -58,7 +58,7 @@ header {
 }
 
 .side-menu a {
-    color: #fff; /* Cambiar el color del texto */
+    color: #fff;
     text-decoration: none;
     font-size: 1.2em;
     display: block;
@@ -78,19 +78,18 @@ header {
 }
 
 .content {
-    background-image: url('fondoapp.png'); /* Ajusta el camino si es necesario */
-    background-size: cover; /* Asegura que la imagen cubra toda el área */
-    background-position: center; /* Centra la imagen en el área */
-    background-repeat: no-repeat; /* Evita que la imagen se repita */
-    min-height: calc(100vh - 60px); /* Ajusta la altura para que cubra solo la sección principal */
-    padding: 20px; /* Ajusta el padding si es necesario */
-    box-sizing: border-box; /* Incluir el padding en la altura total */
-    background-color: #0d1214; /* Fondo de color oscuro para el contenido */
-    padding-bottom: 80px; /* Espacio inferior para evitar superposición con el footer */
+    background-image: url('fondoapp.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: calc(100vh - 60px);
+    padding: 20px;
+    box-sizing: border-box;
+    padding-bottom: 120px; /* Espacio adicional para el reproductor */
 }
 
 footer {
-    background-color: #111; /* Fondo del pie de página */
+    background-color: #111;
     color: #fff;
     padding: 10px 0;
     position: fixed;
@@ -106,14 +105,14 @@ footer {
 }
 
 .contact-info a {
-    color: #ffffff; /* Color blanco */
+    color: #ffffff;
     margin: 0 10px;
     text-decoration: none;
     font-size: 1.5em;
 }
 
 .contact-info a:hover {
-    color: #ff6666; /* Color al pasar el cursor */
+    color: #ff6666;
 }
 
 .contact-info span {
@@ -121,140 +120,13 @@ footer {
     margin: 0 5px;
 }
 
-/* Secciones adicionales */
-.welcome-section {
-    margin: 20px 0;
-}
-
-.menu-shortcuts {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin: 20px 0;
-}
-
-.shortcut-box {
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.shortcut {
-    background-color: #444;
-    color: #fff;
-    text-decoration: none;
-    padding: 10px 20px;
-    margin: 10px 0;
-    border-radius: 5px;
-    display: block;
-}
-
-.shortcut:hover {
-    background-color: #cc1413; /* Cambiar el color al rojo Chauchera */
-}
-
-.next-show {
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    margin: 20px 0;
-}
-
-.show-promo {
-    width: 100%;
-    max-width: 600px;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-}
-
-.history-section {
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    margin: 20px 0;
-}
-
-.members-section {
-    margin: 20px 0;
-}
-
-.member {
-    display: flex;
-    align-items: center;
-    margin: 20px 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.member-photo {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    margin-right: 20px;
-}
-
-.member-info {
-    flex: 1;
-    text-align: left;
-}
-
-.member-info h2 {
-    margin: 0 0 10px 0;
-    color: #fff;
-}
-
-.member-info p {
-    margin: 0;
-    color: #ccc;
-}
-
-.show-section {
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    margin: 20px 0;
-}
-
-.show-photo {
-    width: 100%;
-    max-width: 600px;
-    height: auto;
-    border-radius: 10px;
-    margin: 20px 0;
-}
-
-.video-section {
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    margin: 20px 0;
-}
-
-.show-video {
-    width: 100%;
-    max-width: 600px;
-    height: auto;
-    border-radius: 10px;
-    margin: 20px 0;
-}
-
-/* Estilos específicos para la página de Canciones */
 .playlist-container {
     background-color: rgba(0, 0, 0, 0.5);
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     overflow-y: auto;
-    max-height: calc(100vh - 200px); /* Ajuste para dejar espacio para el header, el footer y el reproductor */
+    max-height: calc(100vh - 160px); /* Ajuste para dejar espacio para el header, el reproductor, y 20px de espacio */
 }
 
 .playlist {
