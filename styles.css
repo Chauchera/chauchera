@@ -336,3 +336,43 @@ audio {
     width: calc(100% - 100px); /* Ajustar para dejar espacio para los detalles de la canción */
     height: 50px;
 }
+/* Estilos específicos para la página del Rider Técnico */
+.rider-section {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 20px 0;
+    color: #fff;
+}
+
+.rider-section h1 {
+    margin-bottom: 20px;
+}
+
+.rider-section p {
+    margin-bottom: 20px;
+}
+
+.pdf-viewer {
+    width: 100%;
+    height: 500px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+}
+
+.download-button {
+    background-color: #cc1413;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: inline-block;
+}
+
+.download-button:hover {
+    background-color: #a10e0e;
+}
