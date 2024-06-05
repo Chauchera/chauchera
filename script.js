@@ -82,3 +82,40 @@ function playSong(src) {
         currentSongCover.src = songElement.querySelector(".song-cover").src;
     }
 }
+
+// Función para cargar y mostrar el PDF en la página ridder.html
+function showPDF(pdfURL) {
+    var loadingTask = pdfjsLib.getDocument(pdfURL);
+    loadingTask.promise.then(function(pdf) {
+        console.log('PDF loaded');
+
+        var pageNumber = 1;
+        pdf.getPage(pageNumber).then(function(page) {
+            console.log('Page loaded');
+
+            var scale = 1.5;
+            var viewport = page.getViewport({scale: scale});
+
+            var canvas = document.getElementById('pdf-canvas');
+            var context = canvas.getContext('2d');
+            canvas.height = viewport.height;
+            canvas.width = viewport.width;
+
+            var renderContext = {
+                canvasContext: context,
+                viewport: viewport
+            };
+            var renderTask = page.render(renderContext);
+            renderTask.promise.then(function() {
+                console.log('Page rendered');
+            });
+        });
+    }, function(reason) {
+        console.error(reason);
+    });
+}
+
+// Solo ejecutar showPDF en la página ridder.html
+if (document.getElementById('pdf-canvas')) {
+    showPDF('rider.pdf');
+}
