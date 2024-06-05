@@ -64,10 +64,21 @@ function closeMenu() {
     }
 }
 
-function playSong(song) {
-    const audioPlayer = document.getElementById('audioPlayer');
-    const audioSource = document.getElementById('audioSource');
-    audioSource.src = song;
-    audioPlayer.load();
-    audioPlayer.play();
+function playSong(src) {
+    var audio = document.getElementById("audio");
+    var audioSource = document.getElementById("audio-source");
+    var currentSongTitle = document.getElementById("current-song-title");
+    var currentSongArtist = document.getElementById("current-song-artist");
+    var currentSongCover = document.querySelector(".audio-player .song-cover");
+
+    audioSource.src = src;
+    audio.load();
+    audio.play();
+
+    var songElement = document.querySelector(`li[onclick="playSong('${src}')"]`);
+    if (songElement) {
+        currentSongTitle.innerText = songElement.querySelector(".song-title").innerText;
+        currentSongArtist.innerText = "Chauchera";
+        currentSongCover.src = songElement.querySelector(".song-cover").src;
+    }
 }
