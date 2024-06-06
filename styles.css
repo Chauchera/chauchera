@@ -430,3 +430,89 @@ audio {
 .whatsapp-button i {
     margin-right: 10px;
 }
+
+/* Estilos específicos para la página de auspicios */
+.sponsors-section {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 20px 0;
+    text-align: left;
+}
+
+.sponsors-section h1,
+.sponsors-section p {
+    margin: 0 0 20px 0;
+}
+
+.sponsor {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 10px 0;
+    text-align: center;
+}
+
+.sponsor img {
+    width: 100px; /* Ajusta el tamaño del logo según sea necesario */
+    height: auto;
+}
+
+.sponsor p {
+    margin: 10px 0 0 0;
+}
+
+.sponsor a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.sponsor a:hover {
+    text-decoration: underline;
+}
+
+form {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 20px 0;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+button[type="submit"] {
+    background-color: #cc1413;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #ff6666;
+}
