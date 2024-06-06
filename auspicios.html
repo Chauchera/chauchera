@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auspicios - Chauchera: Vulgar Display of Covers</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <img src="LogoBlanco.png" alt="Chauchera Logo" class="logo">
+        <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+    </header>
+    <nav id="menu" class="side-menu hidden">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="biografia.html">Biografía Artística</a></li>
+            <li><a href="show.html">Nuestro Show</a></li>
+            <li><a href="canciones.html">Canciones</a></li>
+            <li><a href="ridder.html">Rider Técnico</a></li>
+            <li><a href="auspicios.html">Auspicios</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+    <div id="content" class="content">
+        <section class="sponsors-section">
+            <h1>Auspicios</h1>
+            <p>Estamos agradecidos por el apoyo de nuestros auspiciantes. A continuación, puedes ver más sobre ellos:</p>
+            <div class="sponsor">
+                <img src="sponsor1.png" alt="Auspiciador 1">
+                <p><a href="http://auspiciador1.com" target="_blank">Auspiciador 1</a></p>
+            </div>
+            <div class="sponsor">
+                <img src="sponsor2.png" alt="Auspiciador 2">
+                <p><a href="http://auspiciador2.com" target="_blank">Auspiciador 2</a></p>
+            </div>
+            <!-- Añade más auspiciantes aquí -->
+            <p>¿Te gustaría ser uno de nuestros auspiciantes? Completa el siguiente formulario y nos pondremos en contacto contigo.</p>
+            <form action="mailto:chauchera@example.com" method="post" enctype="text/plain">
+                <div class="form-group">
+                    <label for="name">Nombre y Apellido:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Correo Electrónico:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Número Telefónico:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Mensaje:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                </div>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </div>
+    <footer>
+        <div class="contact-info">
+            <a href="mailto:chauchera@example.com"><i class="fas fa-envelope"></i></a>
+            <span>|</span>
+            <a href="https://facebook.com/chauchera" target="_blank"><i class="fab fa-facebook"></i></a>
+            <span>|</span>
+            <a href="https://instagram.com/chaucherametal" target="_blank"><i class="fab fa-instagram"></i></a>
+            <span>|</span>
+            <a href="https://tiktok.com/@chauchera" target="_blank"><i class="fab fa-tiktok"></i></a>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
