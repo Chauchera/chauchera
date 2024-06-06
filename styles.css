@@ -403,3 +403,30 @@ audio {
 .download-button:hover {
     background-color: #a10f10;
 }
+.contact-section {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 20px 0;
+    text-align: center;
+}
+
+.whatsapp-button {
+    display: inline-block;
+    background-color: #25D366;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.2em;
+    margin-top: 20px;
+}
+
+.whatsapp-button:hover {
+    background-color: #1EBE57;
+}
+
+.whatsapp-button i {
+    margin-right: 10px;
+}
