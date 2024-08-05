@@ -593,3 +593,8 @@ button[type="submit"]:hover {
     text-decoration: none;
     cursor: pointer;
 }
+/* Añadir la clase resizable */
+.resizable {
+    max-width: 100%;
+    height: auto;
+}
