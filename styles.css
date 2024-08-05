@@ -276,7 +276,7 @@ footer {
 }
 
 .show-video {
-    width: 30%;
+    width: 100%;
     max-width: 600px;
     height: auto;
     border-radius: 10px;
