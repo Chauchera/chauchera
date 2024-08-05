@@ -597,5 +597,5 @@ button[type="submit"]:hover {
 .resizable {
     max-width: 70%;
     height: auto;
-    border-radius: 50px;
+    border-radius: 10px;
 }
