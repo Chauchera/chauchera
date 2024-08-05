@@ -119,3 +119,28 @@ function showPDF(pdfURL) {
 if (document.getElementById('pdf-canvas')) {
     showPDF('rider.pdf');
 }
+
+let slideIndex = 0;
+
+function openCarousel() {
+    document.getElementById("carousel").classList.remove("hidden");
+    showSlides(slideIndex);
+}
+
+function closeCarousel() {
+    document.getElementById("carousel").classList.add("hidden");
+}
+
+function plusSlides(n) {
+    showSlides(slideIndex += n);
+}
+
+function showSlides(n) {
+    let slides = document.getElementsByClassName("carousel-item");
+    if (n >= slides.length) { slideIndex = 0 }
+    if (n < 0) { slideIndex = slides.length - 1 }
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].classList.remove("active");
+    }
+    slides[slideIndex].classList.add("active");
+}
