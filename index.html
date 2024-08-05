@@ -45,7 +45,9 @@
         </div>
         <div class="last-show">
             <h2>Último Show</h2>
-            <img src="foto1.jpg" alt="Último Show" class="show-promo" onclick="openCarousel()">
+            <div class="show-container">
+                <img src="ultimo_show.png" alt="Último Show" class="show-promo" onclick="openCarousel()">
+            </div>
         </div>
     </div>
     <footer>
@@ -62,10 +64,9 @@
     <div id="carousel" class="carousel hidden">
         <span class="close" onclick="closeCarousel()">&times;</span>
         <div class="carousel-content">
-            <img src="foto1.jpg" class="carousel-item">
-            <img src="foto2.jpg" class="carousel-item">
-            <img src="foto3.jpg" class="carousel-item">
-            <img src="foto4.jpg" class="carousel-item">
+            <img src="foto1.png" class="carousel-item">
+            <img src="foto2.png" class="carousel-item">
+            <img src="foto3.png" class="carousel-item">
             <!-- Añade más imágenes aquí -->
         </div>
         <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
