@@ -602,12 +602,12 @@ button[type="submit"]:hover {
 .full-screen-video {
     position: relative;
     width: 100%;
-    height: 100vh; /* Ocupa toda la altura de la pantalla */
+    height: auto; /* Ajusta la altura automáticamente según el ancho */
     overflow: hidden;
 }
 
 .full-screen-video video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Asegura que el video cubra toda la pantalla sin distorsionarse */
+    width: 100%; /* El video ocupará el 100% del ancho de la pantalla */
+    height: auto; /* La altura se ajustará proporcionalmente */
 }
+
