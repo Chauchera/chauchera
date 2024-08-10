@@ -599,15 +599,18 @@ button[type="submit"]:hover {
     height: auto;
     border-radius: 10px;
 }
+/* Añadir la clase video inicio */
 .full-screen-video {
-    position: relative;
-    width: 100%;
-    height: auto; /* Ajusta la altura automáticamente según el ancho */
-    overflow: hidden;
+    width: 100%; /* Ocupa el 100% del contenedor padre */
+    max-width: 100%; /* No excede el ancho máximo del contenedor */
+    margin: 0 auto; /* Centra el video en el contenedor */
 }
 
 .full-screen-video video {
-    width: 100%; /* El video ocupará el 100% del ancho de la pantalla */
-    height: auto; /* La altura se ajustará proporcionalmente */
+    width: 100%; /* El video ocupa el 100% del ancho del contenedor */
+    height: auto; /* La altura se ajusta proporcionalmente */
+    display: block; /* Asegura que el video se comporte como un bloque dentro del contenedor */
 }
+
+
 
