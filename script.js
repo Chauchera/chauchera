@@ -51,7 +51,7 @@ document.getElementById('menu').addEventListener('touchend', function() {
 
 function handleSwipe() {
     // Detectar deslizamiento a la izquierda
-    if (touchEndX < touchStartX - 50) { // Asegurarse de que el deslizamiento es significativo
+    if (touchEndX < touchStartX - 50) { 
         closeMenu();
     }
 }
@@ -64,120 +64,94 @@ function closeMenu() {
     }
 }
 
-function playSong(src) {
-    var audio = document.getElementById("audio");
-    var audioSource = document.getElementById("audio-source");
-    var currentSongTitle = document.getElementById("current-song-title");
-    var currentSongArtist = document.getElementById("current-song-artist");
-    var currentSongCover = document.querySelector(".audio-player .song-cover");
+// Funciones para el carrusel en index.html
+function initializeLastShowCarousel() {
+    let slideIndex = 0;
 
-    audioSource.src = src;
-    audio.load();
-    audio.play();
-
-    var songElement = document.querySelector(`li[onclick="playSong('${src}')"]`);
-    if (songElement) {
-        currentSongTitle.innerText = songElement.querySelector(".song-title").innerText;
-        currentSongArtist.innerText = "Chauchera";
-        currentSongCover.src = songElement.querySelector(".song-cover").src;
-    }
-}
-
-// Función para cargar y mostrar el PDF en la página ridder.html
-function showPDF(pdfURL) {
-    var loadingTask = pdfjsLib.getDocument(pdfURL);
-    loadingTask.promise.then(function(pdf) {
-        console.log('PDF loaded');
-
-        var pageNumber = 1;
-        pdf.getPage(pageNumber).then(function(page) {
-            console.log('Page loaded');
-
-            var scale = 1.5;
-            var viewport = page.getViewport({scale: scale});
-
-            var canvas = document.getElementById('pdf-canvas');
-            var context = canvas.getContext('2d');
-            canvas.height = viewport.height;
-            canvas.width = viewport.width;
-
-            var renderContext = {
-                canvasContext: context,
-                viewport: viewport
-            };
-            var renderTask = page.render(renderContext);
-            renderTask.promise.then(function() {
-                console.log('Page rendered');
-            });
-        });
-    }, function(reason) {
-        console.error(reason);
-    });
-}
-
-// Solo ejecutar showPDF en la página ridder.html
-if (document.getElementById('pdf-canvas')) {
-    showPDF('rider.pdf');
-}
-
-// JavaScript modificado para la precarga de imágenes y el carrusel
-document.addEventListener("DOMContentLoaded", function() {
-    const images = document.querySelectorAll('.carousel-slide img');
-    const carouselContainer = document.getElementById('carousel-container');
-    const loadingIndicator = document.getElementById('loading-indicator');
-    let loadedImagesCount = 0;
-
-    images.forEach((img) => {
-        // Crear un nuevo objeto de imagen para precargar
-        const tempImg = new Image();
-        tempImg.src = img.src;
-
-        tempImg.onload = function() {
-            loadedImagesCount++;
-            // Comprobar si todas las imágenes se han cargado
-            if (loadedImagesCount === images.length) {
-                // Ocultar el indicador de carga
-                loadingIndicator.classList.add('hidden');
-                // Mostrar el carrusel
-                carouselContainer.classList.remove('hidden');
-
-                // Inicializar el carrusel después de que las imágenes se hayan cargado
-                initializeCarousel();
-            }
-        };
-
-        tempImg.onerror = function() {
-            console.error(`Error al cargar la imagen: ${img.src}`);
-        };
-    });
-
-    function initializeCarousel() {
-        const carouselSlide = document.querySelector('.carousel-slide');
-        const carouselImages = document.querySelectorAll('.carousel-slide img');
-        const downloadBtn = document.getElementById('downloadCurrent');
-
-        let counter = 0;
-        const size = carouselImages[0].clientWidth;
-
-        document.getElementById('nextBtn').addEventListener('click', () => {
-            if (counter >= carouselImages.length - 1) counter = -1;
-            carouselSlide.style.transition = "transform 0.4s ease-in-out";
-            counter++;
-            carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
-            updateDownloadLink();
-        });
-
-        document.getElementById('prevBtn').addEventListener('click', () => {
-            if (counter <= 0) counter = carouselImages.length;
-            carouselSlide.style.transition = "transform 0.4s ease-in-out";
-            counter--;
-            carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
-            updateDownloadLink();
-        });
-
-        function updateDownloadLink() {
-            const currentImg = carouselImages[counter].getAttribute('src').replace('mini', '');
-            downloadBtn.setAttribute('href', currentImg);
+    function showSlides(n) {
+        const slides = document.getElementsByClassName("carousel-item");
+        if (n >= slides.length) { slideIndex = 0 }
+        if (n < 0) { slideIndex = slides.length - 1 }
+        for (let i = 0; i < slides.length; i++) {
+            slides[i].classList.remove("active");
         }
+        slides[slideIndex].classList.add("active");
     }
-});
+
+    document.querySelector(".prev").addEventListener('click', () => {
+        showSlides(--slideIndex);
+    });
+
+    document.querySelector(".next").addEventListener('click', () => {
+        showSlides(++slideIndex);
+    });
+
+    // Iniciar el carrusel
+    showSlides(slideIndex);
+}
+
+if (document.getElementById('carousel')) {
+    initializeLastShowCarousel();
+}
+
+// Funciones para el carrusel en material.html
+function initializePromoCarousel() {
+    document.addEventListener("DOMContentLoaded", function() {
+        const images = document.querySelectorAll('.carousel-slide img');
+        const carouselContainer = document.getElementById('carousel-container');
+        const loadingIndicator = document.getElementById('loading-indicator');
+        let loadedImagesCount = 0;
+
+        images.forEach((img) => {
+            const tempImg = new Image();
+            tempImg.src = img.src;
+
+            tempImg.onload = function() {
+                loadedImagesCount++;
+                if (loadedImagesCount === images.length) {
+                    loadingIndicator.classList.add('hidden');
+                    carouselContainer.classList.remove('hidden');
+                    initializeCarousel();
+                }
+            };
+
+            tempImg.onerror = function() {
+                console.error(`Error al cargar la imagen: ${img.src}`);
+            };
+        });
+
+        function initializeCarousel() {
+            const carouselSlide = document.querySelector('.carousel-slide');
+            const carouselImages = document.querySelectorAll('.carousel-slide img');
+            const downloadBtn = document.getElementById('downloadCurrent');
+
+            let counter = 0;
+            const size = carouselImages[0].clientWidth;
+
+            document.getElementById('nextBtn').addEventListener('click', () => {
+                if (counter >= carouselImages.length - 1) counter = -1;
+                carouselSlide.style.transition = "transform 0.4s ease-in-out";
+                counter++;
+                carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
+                updateDownloadLink();
+            });
+
+            document.getElementById('prevBtn').addEventListener('click', () => {
+                if (counter <= 0) counter = carouselImages.length;
+                carouselSlide.style.transition = "transform 0.4s ease-in-out";
+                counter--;
+                carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
+                updateDownloadLink();
+            });
+
+            function updateDownloadLink() {
+                const currentImg = carouselImages[counter].getAttribute('src').replace('mini', '');
+                downloadBtn.setAttribute('href', currentImg);
+            }
+        }
+    });
+}
+
+if (document.getElementById('carousel-container')) {
+    initializePromoCarousel();
+}
