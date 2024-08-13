@@ -29,7 +29,7 @@
             <h1>Material Promocional</h1>
             <p>Aquí podrás encontrar material multimedia sobre la banda para que lo descargues</p>
 
-            <div class="logo-container">
+            <div class="logo-container-column">
                 <div class="logo-item">
                     <img src="LogoBlanco.png" alt="Logo Blanco">
                 </div>
@@ -55,7 +55,7 @@
 
             <div class="video-section">
                 <h2>Video Promocional</h2>
-                <video controls class="promo-video">
+                <video autoplay muted loop controls class="promo-video">
                     <source src="promocional.mp4" type="video/mp4">
                     Tu navegador no soporta la reproducción de video.
                 </video>
@@ -81,15 +81,17 @@
         const size = carouselImages[0].clientWidth;
 
         document.getElementById('nextBtn').addEventListener('click', () => {
-            if (counter >= carouselImages.length - 1) return;
-            carouselSlide.style.transform = 'translateX(' + (-size * (counter + 1)) + 'px)';
+            if (counter >= carouselImages.length - 1) counter = -1;
+            carouselSlide.style.transition = "transform 0.4s ease-in-out";
             counter++;
+            carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
         });
 
         document.getElementById('prevBtn').addEventListener('click', () => {
-            if (counter <= 0) return;
-            carouselSlide.style.transform = 'translateX(' + (-size * (counter - 1)) + 'px)';
+            if (counter <= 0) counter = carouselImages.length;
+            carouselSlide.style.transition = "transform 0.4s ease-in-out";
             counter--;
+            carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
         });
     </script>
 </body>
