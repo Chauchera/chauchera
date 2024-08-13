@@ -40,21 +40,28 @@
                 </div>
             </div>
 
-            <div class="carousel-container">
-                <div class="carousel-slide">
-                    <img src="Chauchera001mini.jpg" alt="Foto 1">
-                    <img src="Chauchera002mini.jpg" alt="Foto 2">
-                    <img src="Chauchera003mini.jpg" alt="Foto 3">
-                    <img src="Chauchera004mini.jpg" alt="Foto 4">
-                    <img src="Chauchera005mini.jpg" alt="Foto 5">
-                    <img src="Chauchera006mini.jpg" alt="Foto 6">
-                </div>
-                <div class="carousel-controls">
-                    <button id="prevBtn">&#10094;</button>
-                    <button id="nextBtn">&#10095;</button>
-                </div>
-                <a id="downloadCurrent" href="Chauchera001.jpg" download class="download-btn">Descargar esta foto</a>
-            </div>
+            <!-- Contenedor del carrusel (inicialmente oculto) -->
+<div id="carousel-container" class="carousel-container hidden">
+    <div class="carousel-slide">
+        <img src="Chauchera001mini.jpg" alt="Foto 1">
+        <img src="Chauchera002mini.jpg" alt="Foto 2">
+        <img src="Chauchera003mini.jpg" alt="Foto 3">
+        <img src="Chauchera004mini.jpg" alt="Foto 4">
+        <img src="Chauchera005mini.jpg" alt="Foto 5">
+        <img src="Chauchera006mini.jpg" alt="Foto 6">
+    </div>
+    <div class="carousel-controls">
+        <button id="prevBtn">&#10094;</button>
+        <button id="nextBtn">&#10095;</button>
+    </div>
+    <a id="downloadCurrent" href="Chauchera001.jpg" download class="download-btn">Descargar esta foto</a>
+</div>
+
+<!-- Indicador de carga (puede ser un spinner o simplemente texto) -->
+<div id="loading-indicator">
+    Cargando imágenes, por favor espera...
+</div>
+
 
             <div class="video-section">
                 <h2>Video Promocional</h2>
