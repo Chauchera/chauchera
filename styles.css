@@ -644,6 +644,25 @@ button[type="submit"]:hover {
     transform: scale(1.1);
 }
 
+/* Ocultar inicialmente el carrusel */
+.hidden {
+    display: none;
+}
+
+/* Estilo para el indicador de carga */
+#loading-indicator {
+    text-align: center;
+    font-size: 1.5em;
+    color: #ffffff;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 20px auto;
+    max-width: 600px;
+}
+
+
 .carousel-container {
     position: relative;
     width: 100%;
