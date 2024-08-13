@@ -6,24 +6,24 @@ body {
     margin: 0;
     padding: 0;
     text-align: center;
-    overflow-x: hidden; /* Para evitar el desplazamiento horizontal */
+    overflow-x: hidden;
 }
 
 header {
-    background-color: #000000; /* Color negro */
+    background-color: #000000;
     height: 60px;
     display: flex;
     justify-content: center;
     align-items: center;
-    position: fixed; /* Cambiado a fijo */
-    top: 0; /* Posicionarlo en la parte superior */
-    width: 100%; /* Asegurar que ocupe todo el ancho de la pantalla */
-    z-index: 1000; /* Asegurar que esté por encima de otros elementos */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
 }
 
 .logo {
     width: auto;
-    height: 40px; /* Ajustar según sea necesario */
+    height: 40px;
 }
 
 .menu-icon {
@@ -51,10 +51,10 @@ header {
 }
 
 .side-menu ul {
-    list-style-type: none; /* Eliminar viñetas */
+    list-style-type: none;
     padding: 0;
     margin: 0;
-    text-align: left; /* Alinear el texto a la izquierda */
+    text-align: left;
 }
 
 .side-menu li {
@@ -62,7 +62,7 @@ header {
 }
 
 .side-menu a {
-    color: #fff; /* Cambiar el color del texto */
+    color: #fff;
     text-decoration: none;
     font-size: 1.2em;
     display: block;
@@ -82,20 +82,20 @@ header {
 }
 
 .content {
-    background-image: url('fondoapp.png'); /* Ajusta el camino si es necesario */
-    background-size: cover; /* Asegura que la imagen cubra toda el área */
-    background-position: center; /* Centra la imagen en el área */
-    background-repeat: no-repeat; /* Evita que la imagen se repita */
-    min-height: calc(100vh - 60px); /* Ajusta la altura para que cubra solo la sección principal */
-    padding: 20px; /* Ajusta el padding si es necesario */
-    box-sizing: border-box; /* Incluir el padding en la altura total */
-    background-color: #0d1214; /* Fondo de color oscuro para el contenido */
-    padding-bottom: 80px; /* Espacio inferior para evitar superposición con el footer */
-    margin-top: 60px; /* Añadir margen superior igual a la altura del header */
+    background-image: url('fondoapp.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: calc(100vh - 60px);
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #0d1214;
+    padding-bottom: 80px;
+    margin-top: 60px;
 }
 
 footer {
-    background-color: #111; /* Fondo del pie de página */
+    background-color: #111;
     color: #fff;
     padding: 10px 0;
     position: fixed;
@@ -111,14 +111,14 @@ footer {
 }
 
 .contact-info a {
-    color: #ffffff; /* Color blanco */
+    color: #ffffff;
     margin: 0 10px;
     text-decoration: none;
     font-size: 1.5em;
 }
 
 .contact-info a:hover {
-    color: #ff6666; /* Color al pasar el cursor */
+    color: #ff6666;
 }
 
 .contact-info span {
@@ -158,7 +158,7 @@ footer {
 }
 
 .shortcut:hover {
-    background-color: #cc1413; /* Cambiar el color al rojo Chauchera */
+    background-color: #cc1413;
 }
 
 .next-show {
@@ -168,11 +168,13 @@ footer {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     margin: 20px 0;
 }
+
 .show-container {
     position: relative;
-    z-index: 1; /* Asegura que la imagen esté en un nivel superior al del fondo */
-    cursor: pointer; /* Cambia el cursor a una mano cuando se pasa sobre la imagen */
+    z-index: 1;
+    cursor: pointer;
 }
+
 .show-promo {
     width: 100%;
     max-width: 600px;
@@ -192,26 +194,26 @@ footer {
 
 .history-content {
     display: flex;
-    align-items: stretch; /* Asegura que los elementos hijos se estiren a lo largo de la altura del contenedor */
-    width: 100%
+    align-items: stretch;
+    width: 100%;
 }
 
 .history-image {
     flex: 0 0 30%;
     max-width: 30%;
-    padding: 0; /* Eliminar padding de la imagen */
+    padding: 0;
 }
 
 .history-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 10px 0 0 10px; /* Opcional: para redondear solo las esquinas izquierda de la imagen */
+    border-radius: 10px 0 0 10px;
 }
 
 .history-text {
     flex: 1;
-    padding: 20px; /* Ajusta según sea necesario para el espacio entre la imagen y el texto */
+    padding: 20px;
     text-align: left;
     margin-top: 20px;
 }
@@ -295,7 +297,7 @@ footer {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     overflow-y: auto;
-    max-height: calc(100vh - 370px); /* Ajuste para dejar espacio para el header, el footer y el reproductor */
+    max-height: calc(100vh - 370px);
 }
 
 .playlist {
@@ -335,7 +337,7 @@ footer {
 
 .audio-player {
     position: fixed;
-    bottom: 50px; /* Justo encima del footer */
+    bottom: 50px;
     left: 0;
     width: 100%;
     background-color: #0d1214;
@@ -374,7 +376,7 @@ footer {
 }
 
 audio {
-    width: calc(100% - 100px); /* Ajustar para dejar espacio para los detalles de la canción */
+    width: calc(100% - 100px);
     height: 50px;
 }
 
@@ -409,6 +411,7 @@ audio {
 .download-button:hover {
     background-color: #a10f10;
 }
+
 .contact-section {
     background-color: rgba(0, 0, 0, 0.5);
     padding: 20px;
@@ -462,7 +465,7 @@ audio {
 }
 
 .sponsor img {
-    width: 100px; /* Ajusta el tamaño del logo según sea necesario */
+    width: 100px;
     height: auto;
 }
 
@@ -522,6 +525,7 @@ button[type="submit"] {
 button[type="submit"]:hover {
     background-color: #ff6666;
 }
+
 /* Estilo para el carrusel */
 .carousel {
     position: fixed;
@@ -597,24 +601,27 @@ button[type="submit"]:hover {
     text-decoration: none;
     cursor: pointer;
 }
+
 /* Añadir la clase resizable */
 .resizable {
     max-width: 70%;
     height: auto;
     border-radius: 10px;
 }
+
 /* Añadir la clase video inicio */
 .full-screen-video {
-    width: 100%; /* Ocupa el 100% del contenedor padre */
-    max-width: 100%; /* No excede el ancho máximo del contenedor */
-    margin: 0 auto; /* Centra el video en el contenedor */
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
 }
 
 .full-screen-video video {
-    width: 100%; /* El video ocupa el 100% del ancho del contenedor */
-    height: auto; /* La altura se ajusta proporcionalmente */
-    display: block; /* Asegura que el video se comporte como un bloque dentro del contenedor */
+    width: 100%;
+    height: auto;
+    display: block;
 }
+
 .promo-section {
     text-align: center;
     padding: 20px;
@@ -665,7 +672,6 @@ button[type="submit"]:hover {
     margin: 20px auto;
     max-width: 600px;
 }
-
 
 .carousel-container {
     position: relative;
