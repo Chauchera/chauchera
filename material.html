@@ -29,12 +29,14 @@
             <h1>Material Promocional</h1>
             <p>Aquí podrás encontrar material multimedia sobre la banda para que lo descargues</p>
 
-            <div class="logo-container-column">
+            <div class="logo-container">
                 <div class="logo-item">
                     <img src="LogoBlanco.png" alt="Logo Blanco">
+                    <a href="LogoBlanco.png" download class="download-btn">Descarga logo para fondo oscuro</a>
                 </div>
                 <div class="logo-item white-bg">
                     <img src="LogoNegro.png" alt="Logo Negro">
+                    <a href="LogoNegro.png" download class="download-btn">Descarga logo para fondo claro</a>
                 </div>
             </div>
 
@@ -51,6 +53,7 @@
                     <button id="prevBtn">&#10094;</button>
                     <button id="nextBtn">&#10095;</button>
                 </div>
+                <a id="downloadCurrent" href="Chauchera001.jpg" download class="download-btn">Descargar esta foto</a>
             </div>
 
             <div class="video-section">
@@ -59,6 +62,7 @@
                     <source src="promocional.mp4" type="video/mp4">
                     Tu navegador no soporta la reproducción de video.
                 </video>
+                <a href="promocional.mp4" download class="download-btn">Descargar video</a>
             </div>
         </section>
     </div>
@@ -76,6 +80,7 @@
     <script>
         const carouselSlide = document.querySelector('.carousel-slide');
         const carouselImages = document.querySelectorAll('.carousel-slide img');
+        const downloadBtn = document.getElementById('downloadCurrent');
 
         let counter = 0;
         const size = carouselImages[0].clientWidth;
@@ -85,6 +90,7 @@
             carouselSlide.style.transition = "transform 0.4s ease-in-out";
             counter++;
             carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
+            updateDownloadLink();
         });
 
         document.getElementById('prevBtn').addEventListener('click', () => {
@@ -92,7 +98,13 @@
             carouselSlide.style.transition = "transform 0.4s ease-in-out";
             counter--;
             carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
+            updateDownloadLink();
         });
+
+        function updateDownloadLink() {
+            const currentImg = carouselImages[counter].getAttribute('src');
+            downloadBtn.setAttribute('href', currentImg);
+        }
     </script>
 </body>
 </html>
