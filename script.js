@@ -63,42 +63,50 @@ function closeMenu() {
     }
 }
 
-// Funciones para el carrusel en index.html
+// Función para reproducir canciones
+function playSong(src) {
+    var audio = document.getElementById("audio");
+    var audioSource = document.getElementById("audio-source");
+    var currentSongTitle = document.getElementById("current-song-title");
+    var currentSongArtist = document.getElementById("current-song-artist");
+    var currentSongCover = document.querySelector(".audio-player .song-cover");
+
+    audioSource.src = src;
+    audio.load();
+    audio.play();
+
+    var songElement = document.querySelector(`li[onclick="playSong('${src}')"]`);
+    if (songElement) {
+        currentSongTitle.innerText = songElement.querySelector(".song-title").innerText;
+        currentSongArtist.innerText = "Chauchera";
+        currentSongCover.src = songElement.querySelector(".song-cover").src;
+    }
+}
+
+// Función para mostrar carrusel en index.html
 function openCarousel() {
     document.getElementById("carousel").classList.remove("hidden");
-    showSlides(slideIndex);
+    showSlides(0);
 }
 
 function closeCarousel() {
     document.getElementById("carousel").classList.add("hidden");
 }
 
-function initializeLastShowCarousel() {
-    let slideIndex = 0;
+let slideIndex = 0;
 
-    function showSlides(n) {
-        const slides = document.getElementsByClassName("carousel-item");
-        if (n >= slides.length) { slideIndex = 0 }
-        if (n < 0) { slideIndex = slides.length - 1 }
-        for (let i = 0; i < slides.length; i++) {
-            slides[i].classList.remove("active");
-        }
-        slides[slideIndex].classList.add("active");
-    }
-
-    document.querySelector(".prev").addEventListener('click', () => {
-        showSlides(--slideIndex);
-    });
-
-    document.querySelector(".next").addEventListener('click', () => {
-        showSlides(++slideIndex);
-    });
-
-    showSlides(slideIndex);
+function plusSlides(n) {
+    showSlides(slideIndex += n);
 }
 
-if (document.getElementById('carousel')) {
-    initializeLastShowCarousel();
+function showSlides(n) {
+    let slides = document.getElementsByClassName("carousel-item");
+    if (n >= slides.length) { slideIndex = 0 }
+    if (n < 0) { slideIndex = slides.length - 1 }
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].classList.remove("active");
+    }
+    slides[slideIndex].classList.add("active");
 }
 
 // Funciones para el carrusel en material.html
@@ -119,6 +127,7 @@ function initializePromoCarousel() {
                     loadingIndicator.classList.add('hidden');
                     carouselContainer.classList.remove('hidden');
                     initializeCarousel();
+                    console.log("Carrusel de Material Promocional inicializado");
                 }
             };
 
