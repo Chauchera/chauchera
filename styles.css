@@ -611,6 +611,68 @@ button[type="submit"]:hover {
     height: auto; /* La altura se ajusta proporcionalmente */
     display: block; /* Asegura que el video se comporte como un bloque dentro del contenedor */
 }
+.promo-section {
+    text-align: center;
+    padding: 20px;
+}
+
+.logo-container, .photo-grid, .video-section {
+    margin-top: 30px;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.logo-item img {
+    max-width: 150px;
+    transition: transform 0.3s;
+}
+
+.logo-item:hover img {
+    transform: scale(1.1);
+}
+
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.photo-item img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.photo-item:hover img {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.download-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #ff4c4c;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.download-btn:hover {
+    background-color: #ff1c1c;
+}
+
+.promo-video {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
 
 
 
