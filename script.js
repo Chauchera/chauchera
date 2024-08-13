@@ -50,7 +50,6 @@ document.getElementById('menu').addEventListener('touchend', function() {
 });
 
 function handleSwipe() {
-    // Detectar deslizamiento a la izquierda
     if (touchEndX < touchStartX - 50) { 
         closeMenu();
     }
@@ -70,28 +69,33 @@ function initializeLastShowCarousel() {
 
     function showSlides(n) {
         const slides = document.getElementsByClassName("carousel-item");
+        console.log(`Total de slides: ${slides.length}`); // Depuración
         if (n >= slides.length) { slideIndex = 0 }
         if (n < 0) { slideIndex = slides.length - 1 }
         for (let i = 0; i < slides.length; i++) {
             slides[i].classList.remove("active");
         }
         slides[slideIndex].classList.add("active");
+        console.log(`Mostrando slide número: ${slideIndex}`); // Depuración
     }
 
     document.querySelector(".prev").addEventListener('click', () => {
         showSlides(--slideIndex);
+        console.log("Anterior slide"); // Depuración
     });
 
     document.querySelector(".next").addEventListener('click', () => {
         showSlides(++slideIndex);
+        console.log("Siguiente slide"); // Depuración
     });
 
-    // Iniciar el carrusel
     showSlides(slideIndex);
+    console.log("Carrusel de Último Show inicializado"); // Depuración
 }
 
 if (document.getElementById('carousel')) {
     initializeLastShowCarousel();
+    console.log("Carrusel detectado en index.html"); // Depuración
 }
 
 // Funciones para el carrusel en material.html
@@ -112,6 +116,7 @@ function initializePromoCarousel() {
                     loadingIndicator.classList.add('hidden');
                     carouselContainer.classList.remove('hidden');
                     initializeCarousel();
+                    console.log("Carrusel de Material Promocional inicializado"); // Depuración
                 }
             };
 
@@ -134,6 +139,7 @@ function initializePromoCarousel() {
                 counter++;
                 carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
                 updateDownloadLink();
+                console.log("Siguiente foto en Material Promocional"); // Depuración
             });
 
             document.getElementById('prevBtn').addEventListener('click', () => {
@@ -142,6 +148,7 @@ function initializePromoCarousel() {
                 counter--;
                 carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
                 updateDownloadLink();
+                console.log("Anterior foto en Material Promocional"); // Depuración
             });
 
             function updateDownloadLink() {
@@ -154,4 +161,5 @@ function initializePromoCarousel() {
 
 if (document.getElementById('carousel-container')) {
     initializePromoCarousel();
+    console.log("Carrusel detectado en material.html"); // Depuración
 }
