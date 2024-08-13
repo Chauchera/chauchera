@@ -148,7 +148,7 @@ footer {
 }
 
 .shortcut {
-    background-color: #c81413;
+    background-color: #444;
     color: #fff;
     text-decoration: none;
     padding: 10px 20px;
@@ -158,7 +158,7 @@ footer {
 }
 
 .shortcut:hover {
-    background-color: #444;
+    background-color: #c81413;
 }
 
 .next-show {
