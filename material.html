@@ -27,50 +27,38 @@
     <div id="content" class="content">
         <section class="promo-section">
             <h1>Material Promocional</h1>
-            <img src="Chauchera001.jpg" alt="Foto 1">
+            <p>Aquí podrás encontrar material multimedia sobre la banda para que lo descargues</p>
+
             <div class="logo-container">
                 <div class="logo-item">
                     <img src="LogoBlanco.png" alt="Logo Blanco">
-                    <a href="LogoBlanco.png" download="Logo_Chauchera_Blanco" class="download-btn">Descargar Logo Blanco</a>
                 </div>
-                <div class="logo-item">
+                <div class="logo-item white-bg">
                     <img src="LogoNegro.png" alt="Logo Negro">
-                    <a href="LogoNegro.png" download="Logo_Chauchera_Negro" class="download-btn">Descargar Logo Negro</a>
                 </div>
             </div>
-            <div class="photo-grid">
-                <div class="photo-item">
+
+            <div class="carousel-container">
+                <div class="carousel-slide">
                     <img src="Chauchera001.jpg" alt="Foto 1">
-                    <a href="Chauchera001.jpg" download="Foto_Chauchera_001" class="download-btn">Descargar Foto</a>
-                </div>
-                <div class="photo-item">
                     <img src="Chauchera002.jpg" alt="Foto 2">
-                    <a href="Chauchera002.jpg" download="Foto_Chauchera_002" class="download-btn">Descargar Foto</a>
-                </div>
-                <div class="photo-item">
                     <img src="Chauchera003.jpg" alt="Foto 3">
-                    <a href="Chauchera003.jpg" download="Foto_Chauchera_003" class="download-btn">Descargar Foto</a>
-                </div>
-                <div class="photo-item">
                     <img src="Chauchera004.jpg" alt="Foto 4">
-                    <a href="Chauchera004.jpg" download="Foto_Chauchera_004" class="download-btn">Descargar Foto</a>
-                </div>
-                <div class="photo-item">
                     <img src="Chauchera005.jpg" alt="Foto 5">
-                    <a href="Chauchera005.jpg" download="Foto_Chauchera_005" class="download-btn">Descargar Foto</a>
-                </div>
-                <div class="photo-item">
                     <img src="Chauchera006.jpg" alt="Foto 6">
-                    <a href="Chauchera006.jpg" download="Foto_Chauchera_006" class="download-btn">Descargar Foto</a>
+                </div>
+                <div class="carousel-controls">
+                    <button id="prevBtn">&#10094;</button>
+                    <button id="nextBtn">&#10095;</button>
                 </div>
             </div>
+
             <div class="video-section">
                 <h2>Video Promocional</h2>
                 <video controls class="promo-video">
                     <source src="promocional.mp4" type="video/mp4">
                     Tu navegador no soporta la reproducción de video.
                 </video>
-                <a href="promocional.mp4" download="Video_Chauchera_Promocional" class="download-btn">Descargar Video</a>
             </div>
         </section>
     </div>
@@ -85,5 +73,24 @@
             <a href="https://tiktok.com/@chaucherametal" target="_blank"><i class="fab fa-tiktok"></i></a>
         </div>
     </footer>
+    <script>
+        const carouselSlide = document.querySelector('.carousel-slide');
+        const carouselImages = document.querySelectorAll('.carousel-slide img');
+
+        let counter = 0;
+        const size = carouselImages[0].clientWidth;
+
+        document.getElementById('nextBtn').addEventListener('click', () => {
+            if (counter >= carouselImages.length - 1) return;
+            carouselSlide.style.transform = 'translateX(' + (-size * (counter + 1)) + 'px)';
+            counter++;
+        });
+
+        document.getElementById('prevBtn').addEventListener('click', () => {
+            if (counter <= 0) return;
+            carouselSlide.style.transform = 'translateX(' + (-size * (counter - 1)) + 'px)';
+            counter--;
+        });
+    </script>
 </body>
 </html>
