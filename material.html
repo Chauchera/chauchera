@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Material Promocional - Chauchera</title>
+    <title>Material Promocional - Chauchera: Vulgar Display of Covers</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
@@ -18,7 +18,7 @@
             <li><a href="biografia.html">Biografía Artística</a></li>
             <li><a href="show.html">Nuestro Show</a></li>
             <li><a href="canciones.html">Canciones</a></li>
-            <li><a href="ridder.html">Ridder Técnico</a></li>
+            <li><a href="ridder.html">Rider Técnico</a></li>
             <li><a href="auspicios.html">Auspicios</a></li>
             <li><a href="contacto.html">Contacto</a></li>
             <li><a href="material.html">Material Promocional</a></li>
@@ -77,34 +77,6 @@
             <a href="https://tiktok.com/@chaucherametal" target="_blank"><i class="fab fa-tiktok"></i></a>
         </div>
     </footer>
-    <script>
-        const carouselSlide = document.querySelector('.carousel-slide');
-        const carouselImages = document.querySelectorAll('.carousel-slide img');
-        const downloadBtn = document.getElementById('downloadCurrent');
-
-        let counter = 0;
-        const size = carouselImages[0].clientWidth;
-
-        document.getElementById('nextBtn').addEventListener('click', () => {
-            if (counter >= carouselImages.length - 1) counter = -1;
-            carouselSlide.style.transition = "transform 0.4s ease-in-out";
-            counter++;
-            carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
-            updateDownloadLink();
-        });
-
-        document.getElementById('prevBtn').addEventListener('click', () => {
-            if (counter <= 0) counter = carouselImages.length;
-            carouselSlide.style.transition = "transform 0.4s ease-in-out";
-            counter--;
-            carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
-            updateDownloadLink();
-        });
-
-        function updateDownloadLink() {
-            const currentImg = carouselImages[counter].getAttribute('src');
-            downloadBtn.setAttribute('href', currentImg);
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
