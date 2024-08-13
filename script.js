@@ -144,3 +144,30 @@ function showSlides(n) {
     }
     slides[slideIndex].classList.add("active");
 }
+document.addEventListener("DOMContentLoaded", function() {
+    const images = document.querySelectorAll('.carousel-slide img');
+    const carouselContainer = document.getElementById('carousel-container');
+    const loadingIndicator = document.getElementById('loading-indicator');
+    let loadedImagesCount = 0;
+
+    images.forEach((img) => {
+        // Crear un nuevo objeto de imagen para precargar
+        const tempImg = new Image();
+        tempImg.src = img.src;
+
+        tempImg.onload = function() {
+            loadedImagesCount++;
+            // Comprobar si todas las imágenes se han cargado
+            if (loadedImagesCount === images.length) {
+                // Ocultar el indicador de carga
+                loadingIndicator.classList.add('hidden');
+                // Mostrar el carrusel
+                carouselContainer.classList.remove('hidden');
+            }
+        };
+
+        tempImg.onerror = function() {
+            console.error(`Error al cargar la imagen: ${img.src}`);
+        };
+    });
+});
