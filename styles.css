@@ -616,16 +616,11 @@ button[type="submit"]:hover {
     padding: 20px;
 }
 
-.promo-section p {
-    font-size: 1.2em;
-    color: #fff;
-    margin-top: 10px;
-}
-
 .logo-container {
     display: flex;
-    justify-content: center;
-    gap: 40px;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
     margin-top: 30px;
 }
 
@@ -633,15 +628,16 @@ button[type="submit"]:hover {
     background-color: #000;
     padding: 20px;
     border-radius: 10px;
+    text-align: center;
+}
+
+.logo-item.white-bg {
+    background-color: #fff;
 }
 
 .logo-item img {
     max-width: 150px;
     transition: transform 0.3s;
-}
-
-.logo-item.white-bg {
-    background-color: #fff;
 }
 
 .logo-item:hover img {
@@ -696,6 +692,17 @@ button[type="submit"]:hover {
     margin-top: 20px;
 }
 
+.download-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #ff4c4c;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
 
-
-
+.download-btn:hover {
+    background-color: #ff1c1c;
+}
