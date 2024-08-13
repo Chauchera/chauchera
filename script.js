@@ -120,30 +120,7 @@ if (document.getElementById('pdf-canvas')) {
     showPDF('rider.pdf');
 }
 
-let slideIndex = 0;
-
-function openCarousel() {
-    document.getElementById("carousel").classList.remove("hidden");
-    showSlides(slideIndex);
-}
-
-function closeCarousel() {
-    document.getElementById("carousel").classList.add("hidden");
-}
-
-function plusSlides(n) {
-    showSlides(slideIndex += n);
-}
-
-function showSlides(n) {
-    let slides = document.getElementsByClassName("carousel-item");
-    if (n >= slides.length) { slideIndex = 0 }
-    if (n < 0) { slideIndex = slides.length - 1 }
-    for (let i = 0; i < slides.length; i++) {
-        slides[i].classList.remove("active");
-    }
-    slides[slideIndex].classList.add("active");
-}
+// JavaScript modificado para la precarga de imágenes y el carrusel
 document.addEventListener("DOMContentLoaded", function() {
     const images = document.querySelectorAll('.carousel-slide img');
     const carouselContainer = document.getElementById('carousel-container');
@@ -163,6 +140,9 @@ document.addEventListener("DOMContentLoaded", function() {
                 loadingIndicator.classList.add('hidden');
                 // Mostrar el carrusel
                 carouselContainer.classList.remove('hidden');
+
+                // Inicializar el carrusel después de que las imágenes se hayan cargado
+                initializeCarousel();
             }
         };
 
@@ -170,4 +150,34 @@ document.addEventListener("DOMContentLoaded", function() {
             console.error(`Error al cargar la imagen: ${img.src}`);
         };
     });
+
+    function initializeCarousel() {
+        const carouselSlide = document.querySelector('.carousel-slide');
+        const carouselImages = document.querySelectorAll('.carousel-slide img');
+        const downloadBtn = document.getElementById('downloadCurrent');
+
+        let counter = 0;
+        const size = carouselImages[0].clientWidth;
+
+        document.getElementById('nextBtn').addEventListener('click', () => {
+            if (counter >= carouselImages.length - 1) counter = -1;
+            carouselSlide.style.transition = "transform 0.4s ease-in-out";
+            counter++;
+            carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
+            updateDownloadLink();
+        });
+
+        document.getElementById('prevBtn').addEventListener('click', () => {
+            if (counter <= 0) counter = carouselImages.length;
+            carouselSlide.style.transition = "transform 0.4s ease-in-out";
+            counter--;
+            carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
+            updateDownloadLink();
+        });
+
+        function updateDownloadLink() {
+            const currentImg = carouselImages[counter].getAttribute('src').replace('mini', '');
+            downloadBtn.setAttribute('href', currentImg);
+        }
+    }
 });
