@@ -64,6 +64,15 @@ function closeMenu() {
 }
 
 // Funciones para el carrusel en index.html
+function openCarousel() {
+    document.getElementById("carousel").classList.remove("hidden");
+    showSlides(slideIndex);
+}
+
+function closeCarousel() {
+    document.getElementById("carousel").classList.add("hidden");
+}
+
 function initializeLastShowCarousel() {
     let slideIndex = 0;
 
