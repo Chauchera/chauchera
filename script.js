@@ -63,12 +63,20 @@ function closeMenu() {
     }
 }
  // REPRODUCTOR DE CANCIONES
+// Variable global para almacenar el temporizador
+var playTimeout;
+
 function playSong(src) {
     var audio = document.getElementById("audio");
     var audioSource = document.getElementById("audio-source");
     var currentSongTitle = document.getElementById("current-song-title");
     var currentSongArtist = document.getElementById("current-song-artist");
     var currentSongCover = document.querySelector(".audio-player .song-cover");
+
+    // Cancelar el temporizador anterior si existe
+    if (playTimeout) {
+        clearTimeout(playTimeout);
+    }
 
     audioSource.src = src;
     audio.load();
@@ -81,12 +89,13 @@ function playSong(src) {
         currentSongCover.src = songElement.querySelector(".song-cover").src;
     }
 
-    // Detener la reproducción después de 1 minuto (60 segundos)
-    setTimeout(function() {
+    // Establecer un nuevo temporizador para detener la reproducción después de 1 minuto
+    playTimeout = setTimeout(function() {
         audio.pause();
         audio.currentTime = 0; // Opcionalmente, reiniciar la reproducción al principio
     }, 60000); // 60000 milisegundos = 1 minuto
 }
+
 
 // Función para mostrar carrusel en index.html
 function openCarousel() {
