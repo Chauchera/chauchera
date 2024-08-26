@@ -63,6 +63,7 @@ function closeMenu() {
     }
 }
  // REPRODUCTOR DE CANCIONES
+
  function playSong(src, startTime = 0) {
     var audio = document.getElementById("audio");
     var audioSource = document.getElementById("audio-source");
@@ -78,12 +79,14 @@ function closeMenu() {
     audioSource.src = src;
     audio.load();
 
-    // Actualizar la información de la canción en el pie del reproductor
-    var songElement = document.querySelector(`li[onclick="playSong('${src}')"]`);
+    // Verificar si el elemento de la canción fue encontrado y actualizar la información
+    var songElement = document.querySelector(`li[onclick="playSong('${src}', ${startTime})"]`);
     if (songElement) {
         currentSongTitle.innerText = songElement.querySelector(".song-title").innerText;
-        currentSongArtist.innerText = "Chauchera";  // Asegúrate de que esto se actualiza si es necesario
+        currentSongArtist.innerText = "Chauchera";
         currentSongCover.src = songElement.querySelector(".song-cover").src;
+    } else {
+        console.error("Elemento de la canción no encontrado");
     }
 
     // Reproducir la nueva canción desde el tiempo especificado y detenerla después de 40 segundos
@@ -96,6 +99,7 @@ function closeMenu() {
         }, 40000); // 40000 milisegundos = 40 segundos
     };
 }
+
 
 
 
