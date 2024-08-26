@@ -87,13 +87,17 @@ function closeMenu() {
         currentSongCover.src = songElement.querySelector(".song-cover").src;
     }
 
-    // Reproducir la nueva canción desde el tiempo especificado
+    // Reproducir la nueva canción desde el tiempo especificado y detenerla después de 40 segundos
     audio.onloadedmetadata = function() {
         audio.currentTime = startTime; // Establecer el tiempo de inicio
         audio.play();
+        setTimeout(function() {
+            audio.pause();
+            audio.currentTime = 0; // Opcionalmente, reiniciar la reproducción al principio
+        }, 40000); // 40000 milisegundos = 40 segundos
     };
-
 }
+
 
 
 
