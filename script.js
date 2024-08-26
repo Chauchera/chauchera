@@ -64,10 +64,7 @@ function closeMenu() {
 }
  // REPRODUCTOR DE CANCIONES
 
- // Variable global para almacenar el temporizador
-var playTimeout;
-
-function playSong(src) {
+ function playSong(src, startTime = 0) {
     var audio = document.getElementById("audio");
     var audioSource = document.getElementById("audio-source");
     var currentSongTitle = document.getElementById("current-song-title");
@@ -90,8 +87,15 @@ function playSong(src) {
         currentSongCover.src = songElement.querySelector(".song-cover").src;
     }
 
+    // Reproducir la nueva canción desde el tiempo especificado
+    audio.onloadedmetadata = function() {
+        audio.currentTime = startTime; // Establecer el tiempo de inicio
+        audio.play();
+    };
+}
+
+
     // Reproducir la nueva canción y establecer el tiempo límite de 1 minuto
-    audio.play();
     audio.ontimeupdate = function() {
         if (audio.currentTime >= 60) {  // 60 segundos = 1 minuto
             audio.pause();
