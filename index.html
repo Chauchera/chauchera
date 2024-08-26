@@ -25,20 +25,23 @@
     </nav>
     <div id="content" class="content">
         <div class="full-screen-video">
-            <video controls muted loop>
+            <video id="promotionalVideo" controls muted loop>
                 <source src="promocional.mp4" type="video/mp4">
                 Tu navegador no soporta la reproducción de video.
             </video>
-        </div> 
+        </div>
+        
         <script>
             // Seleccionar el video
             var video = document.getElementById('promotionalVideo');
         
-            // Quitar el mute cuando se reproduce el video
-            video.onplay = function() {
-                video.muted = false;
-            };
-        </script>       
+            // Detectar cuando el video está siendo reproducido
+            video.addEventListener('play', function() {
+                if (video.muted) {
+                    video.muted = false; // Desactivar mute
+                }
+            });
+        </script>     
         <div class="menu-shortcuts">
             <div class="shortcut-box">
                 <a href="biografia.html" class="shortcut">Biografía Artística</a>
