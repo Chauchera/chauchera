@@ -63,21 +63,16 @@ function closeMenu() {
     }
 }
  // REPRODUCTOR DE CANCIONES
-// Variable global para almacenar el temporizador
+
+ // Variable global para almacenar el temporizador
 var playTimeout;
 
-// Función para reproducir canciones
 function playSong(src) {
     var audio = document.getElementById("audio");
     var audioSource = document.getElementById("audio-source");
     var currentSongTitle = document.getElementById("current-song-title");
     var currentSongArtist = document.getElementById("current-song-artist");
     var currentSongCover = document.querySelector(".audio-player .song-cover");
-
-    // Cancelar cualquier temporizador activo
-    if (playTimeout) {
-        clearTimeout(playTimeout);
-    }
 
     // Pausar y reiniciar la canción actual antes de cargar la nueva
     audio.pause();
@@ -87,17 +82,6 @@ function playSong(src) {
     audioSource.src = src;
     audio.load();
 
-    // Reiniciar el temporizador de la barra de progreso y el contador
-    audio.onloadedmetadata = function() {
-        audio.play();  // Reproducir la nueva canción
-
-        // Establecer un nuevo temporizador para detener la reproducción después de 1 minuto
-        playTimeout = setTimeout(function() {
-            audio.pause();
-            audio.currentTime = 0; // Opcionalmente, reiniciar la reproducción al principio
-        }, 60000); // 60000 milisegundos = 1 minuto
-    };
-
     // Actualizar la información de la canción
     var songElement = document.querySelector(`li[onclick="playSong('${src}')"]`);
     if (songElement) {
@@ -105,6 +89,15 @@ function playSong(src) {
         currentSongArtist.innerText = "Chauchera";
         currentSongCover.src = songElement.querySelector(".song-cover").src;
     }
+
+    // Reproducir la nueva canción y establecer el tiempo límite de 1 minuto
+    audio.play();
+    audio.ontimeupdate = function() {
+        if (audio.currentTime >= 60) {  // 60 segundos = 1 minuto
+            audio.pause();
+            audio.currentTime = 0; // Reiniciar la reproducción al principio
+        }
+    };
 }
 
 
