@@ -62,8 +62,7 @@ function closeMenu() {
         menu.classList.add('hidden');
     }
 }
-
-// Función para reproducir canciones
+ // REPRODUCTOR DE CANCIONES
 function playSong(src) {
     var audio = document.getElementById("audio");
     var audioSource = document.getElementById("audio-source");
@@ -81,6 +80,7 @@ function playSong(src) {
         currentSongArtist.innerText = "Chauchera";
         currentSongCover.src = songElement.querySelector(".song-cover").src;
     }
+
     // Detener la reproducción después de 1 minuto (60 segundos)
     setTimeout(function() {
         audio.pause();
