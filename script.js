@@ -81,6 +81,11 @@ function playSong(src) {
         currentSongArtist.innerText = "Chauchera";
         currentSongCover.src = songElement.querySelector(".song-cover").src;
     }
+    // Detener la reproducción después de 1 minuto (60 segundos)
+    setTimeout(function() {
+        audio.pause();
+        audio.currentTime = 0; // Opcionalmente, reiniciar la reproducción al principio
+    }, 60000); // 60000 milisegundos = 1 minuto
 }
 
 // Función para mostrar carrusel en index.html
