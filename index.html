@@ -29,7 +29,16 @@
                 <source src="promocional.mp4" type="video/mp4">
                 Tu navegador no soporta la reproducción de video.
             </video>
-        </div>        
+        </div> 
+        <script>
+            // Seleccionar el video
+            var video = document.getElementById('promotionalVideo');
+        
+            // Quitar el mute cuando se reproduce el video
+            video.onplay = function() {
+                video.muted = false;
+            };
+        </script>       
         <div class="menu-shortcuts">
             <div class="shortcut-box">
                 <a href="biografia.html" class="shortcut">Biografía Artística</a>
