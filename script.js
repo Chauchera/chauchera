@@ -92,7 +92,7 @@ function closeMenu() {
         audio.currentTime = startTime; // Establecer el tiempo de inicio
         audio.play();
     };
-}
+
 
 
     // Reproducir la nueva canción y establecer el tiempo límite de 1 minuto
