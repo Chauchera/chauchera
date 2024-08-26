@@ -66,6 +66,7 @@ function closeMenu() {
 // Variable global para almacenar el temporizador
 var playTimeout;
 
+// Función para reproducir canciones
 function playSong(src) {
     var audio = document.getElementById("audio");
     var audioSource = document.getElementById("audio-source");
@@ -73,28 +74,39 @@ function playSong(src) {
     var currentSongArtist = document.getElementById("current-song-artist");
     var currentSongCover = document.querySelector(".audio-player .song-cover");
 
-    // Cancelar el temporizador anterior si existe
+    // Cancelar cualquier temporizador activo
     if (playTimeout) {
         clearTimeout(playTimeout);
     }
 
+    // Pausar y reiniciar la canción actual antes de cargar la nueva
+    audio.pause();
+    audio.currentTime = 0;
+
+    // Configurar la nueva canción
     audioSource.src = src;
     audio.load();
-    audio.play();
 
+    // Reiniciar el temporizador de la barra de progreso y el contador
+    audio.onloadedmetadata = function() {
+        audio.play();  // Reproducir la nueva canción
+
+        // Establecer un nuevo temporizador para detener la reproducción después de 1 minuto
+        playTimeout = setTimeout(function() {
+            audio.pause();
+            audio.currentTime = 0; // Opcionalmente, reiniciar la reproducción al principio
+        }, 60000); // 60000 milisegundos = 1 minuto
+    };
+
+    // Actualizar la información de la canción
     var songElement = document.querySelector(`li[onclick="playSong('${src}')"]`);
     if (songElement) {
         currentSongTitle.innerText = songElement.querySelector(".song-title").innerText;
         currentSongArtist.innerText = "Chauchera";
         currentSongCover.src = songElement.querySelector(".song-cover").src;
     }
-
-    // Establecer un nuevo temporizador para detener la reproducción después de 1 minuto
-    playTimeout = setTimeout(function() {
-        audio.pause();
-        audio.currentTime = 0; // Opcionalmente, reiniciar la reproducción al principio
-    }, 60000); // 60000 milisegundos = 1 minuto
 }
+
 
 
 // Función para mostrar carrusel en index.html
