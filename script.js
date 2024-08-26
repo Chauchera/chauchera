@@ -93,15 +93,6 @@ function closeMenu() {
         audio.play();
     };
 
-
-
-    // Reproducir la nueva canción y establecer el tiempo límite de 1 minuto
-    audio.ontimeupdate = function() {
-        if (audio.currentTime >= 60) {  // 60 segundos = 1 minuto
-            audio.pause();
-            audio.currentTime = 0; // Reiniciar la reproducción al principio
-        }
-    };
 }
 
 
